@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>progressive enhancement</title>
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/blog.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="blog-masthead">
+            <div class="container">
+                <nav class="blog-nav">
+                    <a class="blog-nav-item" href="index.html">home</a>
+                    <a class="blog-nav-item" href="coderwurstBlog.html">journal</a>
+                    <a class="blog-nav-item" href="softwareDev.html">software crafting</a>
+                    <a class="blog-nav-item" href="mobileApps.html">mobile applications</a>
+                    <a class="blog-nav-item" href="aboutme.html">about me</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="blog-header">
+                <br>
+                <h1 align="left"><b>coderwurst</b></h1>
+                <p class="lead blog-description">software crafting</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 blog-main">
+                    <div class="blog-post" id="progEhance">
+                        <br>
+                        <h4 class="blog-post-title">progressive enhancement</h4>
+                        <p class="blog-post-meta">22nd May , 2015 by <a href="aboutme.html">coderwurst</a></p>
+                        <p>
+
+                        <p>The idea behind Progressive Enhancement is nothing new; it has been 
+                            around since the mid 00s. Jeremy Keith (co-founder of Clearleft - 
+                            <a href="http://clearleft.com" class="external-link" rel="nofollow">http://clearleft.com </a> ) 
+                            sums up the theory as not a particular technique or technology, 
+                            instead a robust engineering approach that provides: <em> "a way of 
+                                looking at things, a way of viewing how you build"</em> (2014).
+                        </p>
+
+                        <p>Progressive Enhancement is not only to do with JavaScript – anything 
+                            other than HTML can be seen as an enhancement including; an interactive 
+                            element that requires a mouse, as not all devices have a mouse attached; 
+                            information presented visually on screen, cannot be appreciated by 
+                            people with a visual impairment; or video and audio without transcripts 
+                            and/ or subtitles are unsuitable for the hearing impaired.
+                        </p>
+                        
+                        
+                        <br>
+            
+            <h2>Graceful Degradation vs. Progressive Enhancement</h2>
+            <p>Since the mid 90s the web dev community based their work on the 
+                <em>Graceful Degradation </em> concept. Taken from the world of 
+                engineering, this approach is about providing users with the 
+                latest and greatest browsers the maximum experience (using the 
+                most modern tools available), whilst leaving older or otherwise 
+                more limited browser versions with the leftovers, with little 
+                attention being paid beyond fixing major problems. This is easily 
+                noticeable when looking at mobile devices, with functionality 
+                dropping from desktop to tablet, and then dropping again from 
+                tablet to phone.</p>
+            <p>
+                <span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="http://designshack.co.uk/wp-content/uploads/ds-mobilefirst-1.jpg" data-image-src="http://designshack.co.uk/wp-content/uploads/ds-mobilefirst-1.jpg"></span>
+                <br><em>image taken from <a href="http://designshack.co.uk/">designschack.com</a></em></p>
+
+            <br>
+            <p align="center"> </p> <p> It's worth to note that people running 
+                devices without JavaScript may not be responsible – perhaps the 
+                device they are using doesn't support JavaScript, or the settings 
+                have been disabled and the user has no ability to re-activate it 
+                (due to security constraints). It also isn't just to do with 
+                JavaScript being deactivated – temporary network errors, DNS l
+                ookup failures, antivirus and personal firewall software can all 
+                have adverse effects on running JavaScript.
+            </p> 
+            
+            <p>In 2003 at the SXSW conference in Texas, Steve Champeon and Nick 
+                Finck presented "Inclusive Web Design for the Future", unveiling 
+                a new blueprint for approaching web development – <em>Progressive Enhancement</em> . 
+                This approach focuses on the content instead of the browser. 
+                Such a website is defined and built from scratch so that it 
+                works for everybody, regardless of the technology available. After 
+                a baseline website with complete functionality has been achieved; 
+                the web experience can be further enhanced (progressively) for 
+                users & /or devices that have JavaScript running – this typically 
+                involves greater functionality for richer features (the bells 
+                and whistles!!).
+            </p>
+            <br>
+            <p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="http://designshack.co.uk/wp-content/uploads/ds-mobilefirst-2.jpg" data-image-src="http://designshack.co.uk/wp-content/uploads/ds-mobilefirst-2.jpg"></span></p>
+            <em>image taken from <a href="http://designshack.co.uk/">designschack.com</a></em></p>
+            <p>Using the < em>Progressive Enhancement </em> approach when developing 
+                a site is not only beneficial to the user experience, but it means 
+                that as the website is accessible without JavaScript, the site will 
+                continue to work in the event that a bug is introduced into the 
+                code… Other advantages include performance enhancements and greater 
+                ease with modular web design.
+            </p>
+            <br>
+            <h2>Adopting a Progressive Enhancement Strategy</h2>
+            <p>Ascertain the Information Architecture of the site</p>
+            <ul>
+                <li>Organise available content</li>
+                <li>Create wireframes for presentation</li>
+                <li>Prioritise elements which you want to display, and from this
+                    start the coding with these HTML elements in the correct order</li>
+            </ul>
+            <p>Cascading Stylesheets (CSS)</p>
+            <ul>
+                <li> Multiple, external stylesheets to improve workflow and help 
+                    gain a greater consistency of presentation across the alternate 
+                    media types, such as screen, print or mobile</li>
+                <li>The combination of multiple style sheets works well with 
+                    making informed decisions about how the stylesheets are 
+                    connected, improving scalability and how to hide certain 
+                    layouts from problematic browsers</li>
+            </ul>
+            <p> Unobtrusive JavaScript
+            </p>
+            <ul>
+                <li>Remove all inline event handlers and move JavaScript to 
+                    linked external files, rather than using script tags </li>
+                <li>Conditional statements can discern the selectors to be used 
+                    and in which situations they are applicable – allowing for 
+                    effective management of the inter-relationship of CSS and 
+                    JavaScript</li>
+                <li>Scripts written to take advantage of browser support, but 
+                    not deny access if that support is unavailable</li>
+            </ul>
+            
+            <br>
+            <h2>Progressive Enhancement Principles</h2>
+            <br>
+            <p><span class="confluence-embedded-file-wrapper image-left-wrapper">
+                    <img class="confluence-embedded-image confluence-external-resource image-left" src="http://alistapart.com/d/understandingprogressiveenhancement/m-m.jpg" data-image-src="http://d.alistapart.com/understandingprogressiveenhancement/m-m.jpg"></span>
+                <br><em>image taken from <a href="http://alistapart.com/">alistapart.com</a></em></p>
+                <br>
+            <p><strong>Step 1 – Make it work (content)</strong></p>
+            <ul>
+                <li> Websites should be built on a <strong> baseline</strong> of usable code</li>
+                <li >Users (and search engine spiders) should be able to understand page content without the need of any scripting</li>
+                <li>New pages or features should be able to work with HTML alone – no images, no CSS, no JavaScript</li>
+                <li>Interactive Elements only implemented with forms and server-side processing</li>
+                <li>Use of good semantic markup incorporating HTML5's new elements and attributes</li>
+                <li>Website will work in most browsers, for as many people and devices as possible including older legacy browsers and devices</li>
+            </ul>
+            <p><strong> Step 2 – Make it Work Better (presentation)</strong></p>
+            <ul>
+                <li> Extra layers then added to the baseline</li>
+                <li>Images, advanced styling, interactions, validation of data, charts and data tables</li>
+                <li>Use of CSS3 makes it possible for the design to 'jump off the page'</li>
+            </ul>
+            <p><strong> Step 3 – Add JavaScript or jQuery behaviours</strong></p>
+            <ul>
+                <li> Client side scripts added for greater functionality</li>
+                <li>Each progress step is a single addition – something extra 
+                    that more modern browsers are capable of doing</li>
+                <li>Accessible and Usable experience</li>
+                <li>As much Content and Interactivity as possible </li>
+            </ul>
+            <p>It is important to remember that we want our websites not just 
+                to be available for users today, but also for users in the 
+                coming days, months and years!
+            </p>
+            <br>
+            <h2>Related Links & Further Reading</h2>
+            <p><strong >See Also</strong></p>
+            <p> Iterative Design</p>
+            <p>Mobile-first Design </p>
+            <p><strong>YouTube</strong>
+            </p>
+            <p><a href="https://www.youtube.com/watch?v=U38dyJhpUnA" class ="external-link" rel="nofollow">https://www.youtube.com/watch?v=U38dyJhpUnA </a></p>
+            <p><a href="https://www.youtube.com/watch?v=gOksID36MO8" class ="external-link" rel="nofollow">https://www.youtube.com/watch?v=gOksID36MO8 </a></p>
+            <p><a href="https://www.youtube.com/watch?v=Uyw1m2t2RJw" class ="external-link" rel="nofollow">https://www.youtube.com/watch?v=Uyw1m2t2RJw </a></p>
+            <p><strong> Further Reading</strong ></p>
+            <p><a href="http://alistapart.com/article/understandingprogressiveenhancement" class="external-link" rel="nofollow">http://alistapart.com/article/understandingprogressiveenhancement </a></p>
+            <p><a href="http://www.cyberockk.com/2014/11/adopt-progressive-enhancement-strategy.html" class="external-link" rel="nofollow">http://www.cyberockk.com/2014/11/adopt-progressive-enhancement-strategy.html </a></p>
+            <p><a href="http://designshack.net/articles/css/mobilefirst/" class="external-link" rel="nofollow">http://designshack.net/articles/css/mobilefirst/ </a></p>
+            <p><a href="https://www.gov.uk/service-manual/making-software/progressive-enhancement.html" class="external-link" rel="nofollow">https://www.gov.uk/service-manual/making-software/progressive-enhancement.html </a></p>
+          
+                        
+                        <nav>
+                            <ul class="pager">
+                                <li><a href="softwareDev.html">back</a></li>
+                            </ul>
+                        </nav>
+                    </div><!-- /.blog-post progEhance -->
+                </div><!-- /.blog-main -->
+                <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                    <div class="sidebar-module">
+                        <br>
+                        <h4><b>coderwurst elsewhere</b></h4>
+                        <ol class="list-unstyled">
+                            <li><a href="https://twitter.com/coderwurst">twitter</a></li>
+                            <li><a href="https://www.linkedin.com/pub/andrew-mcmechan/37/251/849">LinkedIn</a></li>
+                            <li><a href="https://www.flickr.com/photos/coderwurst/">flickr</a></li>
+                        </ol>
+                    </div>
+                </div><!-- /.blog-sidebar -->
+            </div>
+        </div>
+        <footer class="blog-footer">
+            <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>,</p>
+            <p>Continual progressive enhancement by <a href="https://twitter.com/coderwurst">@coderwurst</a>.</p>
+            <p>
+                <a href="#">Back to top</a>
+            </p>
+        </footer>
+    </body>
+</html>

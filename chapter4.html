@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>software development</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/blog.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="blog-masthead">
+            <div class="container">
+                <nav class="blog-nav">
+                    <a class="blog-nav-item" href="index.html">home</a>
+                    <a class="blog-nav-item" href="coderwurstBlog.html">journal</a>
+                    <a class="blog-nav-item" href="softwareDev.html">software crafting</a>
+                    <a class="blog-nav-item" href="mobileApps.html">mobile applications</a>
+                    <a class="blog-nav-item" href="aboutme.html">about me</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="blog-header">
+                <br>
+                <h1 align="left"><b>coderwurst</b></h1>
+                <p class="lead blog-description">chapter 4 - working with basic classes and variables</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-8 blog-main">
+
+                    <div class="blog-post" id="main">
+                                                                        <b>Primitive Variables</b> <ul>
+                        <li>most basic form of data storage in Java</li>
+                        <li>8 types</li>
+                        <li>each type reserves a certain number of bits in memory</li>
+                        </ul>
+                        <br>
+                        <em>boolean char character byte int integer double short float long</em>
+                        <br><br>
+                        <ul>
+                        <li>calculations performed with primitives are much quicker than those preformed with objects</li>
+                        <li>initialisation happens with <i>type name;</i> (a.k.a. instance variable)</li>
+                        <li>once a variable is declared, it cannot be broken down into any smaller elements</li>
+                        <li>a declared variable can be set or read, nothing else</li>
+                        <li>no methods can be called from this variable</li>
+                        <li>booleans default to false</li>
+                        <li>other default values are 0</li>
+                        </ul>
+
+                        <b>boolean Primitive</b> <ul>
+                        <li>1 bit value</li>
+                        <li>true or false</li>
+                        <li>exact size in Java is not defined, and may therefore use more or less space on different platforms</li>
+                        <li>2 valid literals; <i>true</i> and <i>false</i></li>
+                        </ul>
+
+                        <b>char Primitive</b> <ul>
+                        <li>single 16-bit Unicode character</li>
+                        <li>16 bits in memory</li>
+                        <li>min is \n0000 or 0</li>
+                        <li>max is \uffff or 65,535</li>
+                        <li>single quotes used when initialising literals</li>
+                        <li>individual characters, special characters, Unicode characters, hexadecimal and octal representations are all valid literals</li>
+                        </ul>
+
+                        <b>byte Primitive</b> <ul>
+                        <li>normally used to store small, signed numbers up to a byte in size</li>
+                        <li>1 byte == 8 bits, max value of 127 and min of -128</li>
+                        <li>defaults to 0</li>
+                        </ul>
+
+                        <pre></code>byte passengers = 4; // known as an implicit cast from int to byte
+byte doors = (byte) 2; // explicit cast </code> </pre>
+                        <b>short Primitive</b> <ul>
+                        <li>used for small numbers</li>
+                        <li>commonly used to save space over an int</li>
+                        <li>16 bits of memory, can store a 16 bit signed two's complement non-floating point number</li>
+                        <li>max 32,767</li>
+                        <li>min -32,768</li>
+                        <li>again can be initialised implicitly or explicity as above</li>
+                        <li>default is again 0</li>
+                        </ul>
+
+                        <b>int Primitive</b> <ul>
+                        <li>most commonly used</li>
+                        <li>32 bits of memory - 32 bit signed two's complement non-floating point number</li>
+                        <li>max value 2,147,483,647</li>
+                        <li>min value -2,147,483,648</li>
+                        </ul>
+
+                        <pre><code>byte wheelbase = 90;
+int wBase = wheelbase; // implicit cast
+char cyclinders = 'u\1234';
+int cyc = cyclinders; // implicit cast from char to integer</code></pre>
+<br>
+                        <b>long Primitive</b> <ul>
+                        <li>default 0L</li>
+                        <li>occupies 64 Bits to store a 64 bit two's complement non-floating point number</li>
+                        <li>max 9,223,372,036,854,775,807</li>
+                        <li>min -9,223,372,036,854,775,808</li>
+                        <li>long thisLong = 1238574638274L</li>
+                        <li>L of l appended to an int declares this number is a long</li>
+                        </ul>
+
+                        <b>float Primitive</b> <ul>
+                        <li>default value 0.0f</li>
+                        <li>F or f appended to int number to determine floating point number</li>
+                        <li>requires 32 bits of memory and may contain a 32 bit value</li>
+                        <li>max 3.4e ^+38</li>
+                        <li>min 1.4e^-45</li>
+                        </ul>
+
+                        <b>double Primitive</b> <ul>
+                        <li>used to store large decimal values</li>
+                        <li>default of 0.0</li>
+                        <li>can also be appended with d or D</li>
+                        <li>64 bits in memory</li>
+                        <li>max 1.8e^308</li>
+                        <li>min 5e^-324</li>
+                        <li>doubles are preferred over floats as, as a float grows it can loose percision</li>
+                        <li>char and boolean are unique, char is only primitive type that stores unsigned data, boolean true or false</li>
+                        </ul>
+
+                        <br />
+                        <b>Floating Point Math</b> <ul>
+                        <li>floating point numbers loose precision the bigger they become</li>
+                        <li>adding 2 numbers together can result in variances particularly after the decimal point</li>
+                        <li>this can also lead to further inaccuracy when converting into a decimal number - for example, when using NumberFormat to display a currency</li>
+                        <li>doubles are more accurate, but can still suffer from the same problems</li>
+                        <li>for this reason, currencies should never be stored as a double or a float, instead the class BigDecimal should be used</li>
+                        <li>BigDecimal is not so fast to process, but provides the required accuracy needed</li>
+                        </ul>
+
+                        <b>Primitives vs. Their Wrapper Class</b> <ul>
+                        <li>each primitive has a built in Wrapper class</li>
+                        <li>this wrapper, can convert a primitive into an object</li>
+                        <li>Integer, Double, Boolean, Short, Byte, Float, Long</li>
+                        <li>autoboxing is the promotion of a primitive variable to its wrapper class</li>
+                        <li>unboxing is the converstion to a primitive data type</li>
+                        <li>instantiated like Objects - Intefer myInt = new Integer(5);</li>
+                        <li>conversion can be used interchangeable - however is bad practice as using primitive data types is much more efficient allowing for faster calculations</li>
+                        </ul>
+
+                        <br><b>Objects</b> <br />
+                        <ul>
+                        <li>almost everything in Java is an object</li>
+                        <li>object-orientated-programming</li>
+                        <li>internally objects use primitive data types</li>
+                        <li>also contain methods fundamental philosophy on Java is to have object classes that can be reused over and over in the code</li>
+                        <li>a developer writes a class - a file containing the code, tangible item</li>
+                        <li>this class is the blueprint the JVM uses to create an object at runtime</li>
+                        <li>many objects can be built from the one class, known as the JVM creating instances of the class</li>
+                        <li>each instance created, is an object of the initial class</li>
+                        </ul>
+
+                        <b>Initialising Objects</b> <ul>
+                        <li>the new operator must be used to create objects Car thisCar = new Car(params)</li>
+                        <li>objects that are instantiated are assigned a value of null, eg. Car oldCar; and cannot use any of the methods in this class - if it is tried, it will throw a null pointer exception</li>
+                        <li>sometimes the restrictions on primitive data types mean that an object must be used - for example, the BigDecimal and BigInteger classes when using large numbers</li>
+                        <li>objects should be used when a lot of similar data is to be stored</li>
+                        <li>objects should be used to group together similar code in a distinct class that may be reused</li>
+                        <li>very common error when working with objects is the NullPointerException</li>
+                        <li>this is a very hard error to track down, but coding initially can help if new objects are always instantiated</li>
+                        <li>it is also possible to perform a check to ensure that an object is not null before performing any of the objects methods</li>
+                        </ul>
+
+                        <b>Arrays</b> <ul>
+                        <li>series of variables</li>
+                        <li>must be of the same type</li>
+                        <li>easily accessible via an index</li>
+                        <li>can be made up of primitive data types or objects</li>
+                        
+
+                        <em>int [] testScore = new int [3];</em>
+                        <li>box brackets should follow the data type - but not a must</li>
+                        <li>the number in the brackets is the size of the array</li>
+                        <li>array indexes are 0 based, i.e. start at 0 and work up - important to remember when looping over any array</li>
+                        <li>arrays can also be multidimensional with more than one index, more to come</li>
+                        </ul>
+
+                        <br/>
+                        <b>Enumerations</b> <ul>
+                        <li>special data type</li>
+                        <li>allows for a variable to be set to predefined constants</li>
+                        <li>useful when there is a limited amount of options available and the variable is restricted to these known values only</li>
+                        <li>eg. a deck of cards would have the enum suit { CLUBS, DIAMONDS, SPADES, HEARTS}</li>
+                        <li>recent addition to Java 5.0</li>
+                        <li>basically a simplified form of object but makes code more readable</li>
+                        </ul>
+
+                        <b>Java Types</b> <ul>
+                        <li>Java is strongly typed - not like JavaScript</li>
+                        <li>once an int is declared, it can only contain an int</li>
+                        <li>unless it is converted</li>
+                        </ul>
+
+                        <b>Strongly Typed Variables</b> <ul>
+                        <li>help create more reliable code</li>
+                        <li>Java compiler will not allow dev to mismatch variables</li>
+                        <li>only data types that are comparable with each other can be comverted</li>
+                        <li>some data types can only be converted in one direction, eg a int can become a float, but a float cannot become an int without the loss of precision</li>
+                        <em>float floatNum = 1.5F; int wasFloat = (int) floatNum; // results in wasFloat == 1 as 5 is truncated</em>
+                        <li>the process is called <b>casting</b> as a different type</li>
+                        <li>var thieVar = (type) otherVar;</li>
+                        <li>incorrect casting results in a cast type error at runtime</li>
+                        <li>only use casting when absolutely necessary</li>
+                        </ul>
+
+                        <b>Naming Conventions</b> <ul>
+                        <li>commonly all devs use the Oracle naming convention</li>
+                        <li>Class Names should be a Noun, first letter capitalised along with EachInternalWord, should be as short as possible</li>
+                        <li>variables should be descriptive, to show what variable is used for, lowercase and camel case forOtherWords</li>
+                        </ul>
+
+                        <b>Literals</b> <ul>
+                        <li>hard coded, value used with code</li>
+                        <li>literal values are not variables</li>
+                        <li>all primitive types except booleans are initialised with literal values</li>
+                        <li>from Java 7, underscores will be able to be placed in numeric values to increase readibility, the compiler will ignore this at runtime, a good example would be credit card numbers, or for use instead of commas for larger numbers</li>
+                        </ul>
+
+                        <br />
+
+
+                        </div>
+
+                    </div><!-- /.blog-main -->
+
+
+
+                
+                <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                    <div class="sidebar-module">
+                        <br>
+                        <h4><b>coderwurst elsewhere</b></h4>
+                        <ol class="list-unstyled">
+                            <li><a href="https://twitter.com/coderwurst">twitter</a></li>
+                            <li><a href="https://www.linkedin.com/pub/andrew-mcmechan/37/251/849">LinkedIn</a></li>
+                            <li><a href="https://www.flickr.com/photos/coderwurst/">flickr</a></li>
+                        </ol>
+                    </div>
+                </div><!-- /.blog-sidebar -->
+
+                </div><!-- /.row -->
+
+            </div><!-- /.container -->
+    </body>
+
+    <footer class="blog-footer">
+                <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>,</p>
+                <p>Continual progressive enhancement by <a href="https://twitter.com/coderwurst">@coderwurst</a>.</p>
+                <p>
+                    <a href="#">Back to top</a>
+                </p>
+            </footer>
+</html>

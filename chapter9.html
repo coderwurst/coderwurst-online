@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>software development</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/blog.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="blog-masthead">
+            <div class="container">
+                <nav class="blog-nav">
+                    <a class="blog-nav-item" href="index.html">home</a>
+                    <a class="blog-nav-item" href="coderwurstBlog.html">journal</a>
+                    <a class="blog-nav-item" href="softwareDev.html">software crafting</a>
+                    <a class="blog-nav-item" href="mobileApps.html">mobile applications</a>
+                    <a class="blog-nav-item" href="aboutme.html">about me</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="blog-header">
+                <br>
+                <h1 align="left"><b>coderwurst</b></h1>
+                <p class="lead blog-description">chapter 9 - handling exceptions</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-8 blog-main">
+
+                    <div class="blog-post" id="main">
+                                                                <p><b>exceptions</b></p>
+
+                                <ul>
+                                <li>an exception is thrown in Java when a program violates the semantic constraints of the Java programming language, the JVM signals this error to the program as an exception</li>
+                                <li>disrupts the normal flow of a program</li>
+                                <li>results in an exception object being created</li>
+                                </ul>
+
+                                <b>Exception Hierarchy</b><ul>
+                                <li>defined by an instance of the class Throwable</li>
+                                <li>most exceptions are checked</li>
+                                <li>also unchecked - such as Runtime exceptions which return errors</li>
+                                </ul>
+
+                                <br />
+                                <b>Checked Exceptions</b><ul>
+                                <li>checked by compiler at compile time</li>
+                                <li>must be surrounded with a catch block, otherwise at this point the thread will terminate. In the case of a 1 thread program, the program will terminate</li>
+                                <li>a handler can be used to catch such an exception</li>
+                                </ul>
+
+                                <b>Unchecked Exceptions</b><ul>
+                                <li>checked at runtime, rather than compile time</li>
+                                <li>all subclasses to te RuntimeException class</li>
+                                <li>these do not need to be caught, but a program is coded such that these exceptions should not be encountered</li>
+                                <li>no need for try - catch as these exceptions should rarely occur (down to programming mistakes)</li>
+                                <li>errors are unchecked exceptions that represent extreme conditions and will typically cause your application to fail</li>
+                                <li>most erros are unrecoverable external errors</li>
+                                </ul>
+
+                                <br />
+                                <b>Oracle Tutorials - Exceptions</b><a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/">https://docs.oracle.com/javase/tutorial/essential/exceptions/</a><ul>
+                                <li>the call stack contains the following info</li>
+                                </ul>
+
+                                <br />
+                                <ul>
+                                <li>if an exception is thrown, the system works backwards through the calls until it finds a handler that corresponds to the exception</li>
+                                </ul>
+
+                                <ul>
+                                <li>why ise exceptions? If - else statements could be used to make sure an object is there before any action is preformed on it, however it makes the code very unreadable</li>
+                                </ul>
+
+                                <pre><code>errorCodeType readFile {
+initialize errorCode = 0;
+open the file;
+
+if (theFileIsOpen) {
+    determine the length of the file;
+
+    if (gotTheFileLength) {
+        allocate that much memory;
+
+            if (gotEnoughMemory) {
+                read the file into memory;
+
+                if (readFailed) {
+                    errorCode = -1; } 
+                } else { 
+                errorCode = -2; 
+            } 
+    } else { 
+        errorCode = -3; 
+    } 
+close the file;
+
+if (theFileDidntClose && errorCode == 0) { 
+    errorCode = -4; 
+} else { 
+    errorCode = errorCode and -4; }
+} else { 
+    errorCode = -5; 
+}   
+return errorCode; } </code></pre><ul>
+                                <li>exceptions make this code much more readable</li>
+                                </ul>
+
+                                <pre><code>readFile { 
+try { 
+    open the file; 
+    determine its size; 
+    allocate that much memory; 
+    read the file into memory; 
+    close the file;
+    } catch (fileOpenFailed) {
+    doSomething;
+    } catch (sizeDeterminationFailed) { 
+        doSomething;
+    } catch (memoryAllocationFailed) { 
+        doSomething;
+    } catch (readFailed) { 
+        doSomething;
+    } catch (fileCloseFailed) { 
+        doSomething;} 
+    } </code></pre>
+                                <li>another advantage is that the exception can be traces up the call stack when thrown - traceability</li>
+                                <li> thirdly an advantage of using exceptions is the creation of the exception object, which means similar exceptions can be grouped and handled together</li>
+                                </ul>
+
+<br>                                <b>Defining Exceptions</b><ul>
+                                <li>should have no argument constructor and aconstructor with a single string argument</li>
+                                <li>an exception that extends the Exception class, is a checked exception</li>
+                                <li>an exception that extends the RuntimeException class is unchecked</li>
+                                <li>all exception subclasses should end with ClassName<b>Exception</b></li>
+                                <li>likewise, all error classes should have a class name ending in <b>Error</b></li>
+                                </ul>
+
+                                <b>Throwing Exceptions</b><ul>
+                                <li>the throw statement is used to throw exceptions in Java</li>
+                                <li>only objects of type or sub-type of class Throwable can be thrown - otherwise an error will be thrown</li>
+                                </ul>
+
+                                <b>Propagating Exceptions</b><ul>
+                                <li>exceptions can be propagated all the way up to the main method</li>
+                                <li>if the main method does not handle the exception, it will be passed to the JVM and the application will be terminated</li>
+                                <li>the method that contains the exception must catch it, or send it to the calling method</li>
+                                <li>to send it to the calling method, the throws keyword must be included in the method declaration along with the exception name</li>
+                                </ul>
+
+                                <br />
+                                <ul>
+                                <li><pre >package chapter9;<br />
+                                <br />
+/*****************************<br />
+* Created with IntelliJ IDEA<br />
+* Date: 30/08/2015<br />
+* Time &amp; Version: 11:11 V1<br />
+* PROGRAM INFO<br />
+*****************************/<br />
+public class Test {<br />
+public static void main(String[] args) {<br />
+Test test = new Test();<br />
+    try {<br />
+    test.throwChecked4();<br />
+    } catch (MyCheckedException ex){<br />
+    System.out.println("Exception thrown: " + ex);<br />
+    }<br />
+}//main
+<br />
+
+public void throwChecked4() throws MyCheckedException{<br />
+    throwChecked3();<br />
+    }
+<br />
+public void throwChecked3() throws MyCheckedException{<br />
+    throwChecked2();<br />
+    }
+<br />
+public void throwChecked2() throws MyCheckedException{<br />
+    throwChecked();<br />
+    }
+<br />
+public void throwChecked() throws MyCheckedException{<br />
+    throw new MyCheckedException();<br />
+    }
+<br />
+}//class</pre></li>
+</ul>
+
+                                <br />
+                                <b>Alter the Program Flow</b><ul>
+                                <li>code executed within a try clause will allow any exceptions that are thrown to be evaluated by the associated catch clases</li>
+                                </ul>
+
+                                <b>try - catch</b><ul>
+                                <li>this can catch exceptions either explicitly or thrown up through the method calls</li>
+                                <li>if an exception is thrown, the statements after the exception in the try - catch block will not be executed</li>
+                                <li>when ordering more than 1 exception catch clauses, always begin with the subclasses first - eg. NumberFormatException, IllegalArgumentException, RuntimeException adn then Exception</li>
+                                <li>NumberFormatException is at the bottom of the hierarchy and is a subclass of IllegalArgumentException, which is a subclass of RuntimeException which is a subclass of Exception</li>
+                                <li>in the real world, RuntimeException or Exception are not caught, instead a more specific sub-class is handled</li>
+                                <li>the exception object thrown can be printed toString which provides about the exception and the class name</li>
+                                <li>other methods commonly use on Exception objects include; getMessage which returns a detailed message, printStackTrace which contains the detailed message, class name and a stack trace</li>
+                                <li>the catch block should NEVER be empty - known as silencing an excpetion</li>
+                                <li>common practice is to name exception objects using the first letters of the Object name, eg. ClassCastException cce</li>
+                                </ul>
+
+                                <b>try - finally</b><ul>
+                                <li>the finally clause is always exectured after the try clause has completed, unless the application has been terminated</li>
+                                <li>if an unchecked exception is thrown in the try block, the finally statement is completed, but nothing outside of this statement</li>
+                                </ul>
+
+                                <b>try - catch - finally</b><ul>
+                                <li>combination of the first 2</li>
+                                <li>finally block will execute after the try - catch unless the code is terminated before reaching the finally statement</li>
+                                </ul>
+
+                                <b>try - with - resources</b><ul>
+                                <li>used for declaring resources that are no longer needed after execution</li>
+                                <li>must implement the AutoClosable interface</li>
+                                <li>if an exception is thrown, the resource is closed</li>
+                                <li>otherwise once the code block has been completed, the resource is closed</li>
+                                <li>many many classes can make use of this type of statement <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html">http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html</a></li>
+                                <li>instead of closing, for example, a scanner object in a finally block, it can be done implicitly as follows</li>
+                                </ul>
+
+                                try (Scanner c = new SCanner(System.in)) { // process } catch (InputMismatchException ime) { ime.printStackTrace() } <b>multi-catch clause</b><ul>
+                                <li>allows for multiple exception arguments in one catch clause</li>
+                                </ul>
+
+                                ... catch (ArrayIndexOutOfBoundsException aioobe) {} catch (NullPointerException npe) {}...<ul>
+                                <li>the above example can be refactored into a multi-catch clause catch (ArrayIndexOutOfBoundsException | NullPointerException e) { e.printStackTrace(); }</li>
+                                </ul>
+
+                                <br />
+                                <b>Recognising Common Exceptions</b><br />
+                                <b>common checked exceptions</b><ul>
+                                <li>CloneNotSupportedException<ul>
+                                <li>when the clone method is called by an object that cannot be cloned</li>
+                                <li>deep cloning, a.k.a. deep copying, is when an object makes an exact duplicate of an objects state</li>
+                                <li>there is also a shallow copy, <a href="http://www.jusfortechies.com/java/core-java/deepcopy_and_shallowcopy.php">http://www.jusfortechies.com/java/core-java/deepcopy_and_shallowcopy.php</a> </li>
+                                <li>shallow copies are bitwise, a copy object is created with copies of fields and references to other objects still point to the same object from the initial object</li>
+                                <li>a deep copy generates not only new field but an entirely new reference object</li>
+                                </ul>
+
+                                </li>
+                                <li>ClassNotFoundException<ul>
+                                <li>thrown when a method cannot be loaded due to an issue locating its defined location</li>
+                                </ul>
+
+                                </li>
+                                <li>NoSuchMethodException<ul>
+                                <li>thrown when a method cannot be loaded due to an issue locating its defined location</li>
+                                <li>one example of this is when using reflection to find a method, and there is no method there</li>
+                                </ul>
+
+                                </li>
+                                <li>FileNotFoundException<ul>
+                                <li>when a file cannot be found that is to be opened</li>
+                                </ul>
+
+                                </li>
+                                <li>InterruptedIOException<ul>
+                                <li>thrown when a thread is interrupted</li>
+                                <li>look out for the BytesTransferred field to see how much information was transfered before the connection was lost</li>
+                                </ul>
+
+                                </li>
+                                <li>IOException<ul>
+                                <li>when a failed I/O operation occurs</li>
+                                </ul>
+
+                                </li>
+                                <li>SQLException</li>
+                                <li>FontFormatException</li>
+                                </ul>
+
+                                <br />
+                                <b>common unchecked Exceptions</b><ul>
+                                <li>IllegalArgumentException<ul>
+                                <li>java.nio.file exception</li>
+                                <li>thrown when an illegal argument has been passed</li>
+                                </ul>
+
+                                </li>
+                                <li>NumberFormatException<ul>
+                                <li>attempted converstion from a string to a numeric type with the wrong format</li>
+                                </ul>
+
+                                </li>
+                                <li>ArrayIndexOutOfBoundsException<ul>
+                                <li>when an array has been accessed with an illegal index, less than or greater to the array size</li>
+                                </ul>
+
+                                </li>
+                                <li>IndexOutOfBoundsException<ul>
+                                <li>thrown when an index is out of range</li>
+                                <li>eg. when using a LinkedList</li>
+                                </ul>
+
+                                </li>
+                                <li>NullPointerException<ul>
+                                <li>when an attempt to return an object fails and only a null value is found</li>
+                                </ul>
+
+                                </li>
+                                <li>IllegalStateException<ul>
+                                <li>when a mthod has been invoked at an inappropriate time, being in an inappropriate state</li>
+                                </ul>
+
+                                </li>
+                                <li>ClassCastException<ul>
+                                <li>when code attempts to cast an object into a subclass of which it is not an instance</li>
+                                </ul>
+
+                                </li>
+                                <li>ArithmeticException<ul>
+                                <li>for example, trying to divide a numeric value by 0</li>
+                                </ul>
+
+                                <br />
+                                common errors</b><ul>
+                                <li>AssertionError<ul>
+                                <li>thrown upon a failed assertion</li>
+                                </ul>
+
+                                </li>
+                                <li>ExceptionInInitialize<ul>
+                                <li>unexpected exception occurs in a static initializer</li>
+                                </ul>
+
+                                </li>
+                                <li>VirtualMachineError<ul>
+                                <li>thrown for a JVM error</li>
+                                </ul>
+
+                                </li>
+                                <li>OutOfMemoryError<ul>
+                                <li>when garbage collection is performed but unable to create any space</li>
+                                </ul>
+
+                                </li>
+                                <li>NoClassDefFoundError<ul>
+                                <li>when a class definition that was there at compile time can no longer be found</li>
+                                </ul>
+
+                                </li>
+                                </ul>
+
+                                <br />
+
+                                <b>Stack Overflow Exception Error</b><br />
+                                <br />
+                                <b>Code</b><br />
+                                <br />
+                                <pre >private Integer counter = 0;<br />
+private ArrayList &lt; Integer&gt; unstoppable = new ArrayList&lt;&gt;();<br />
+                                <br />
+public void createErrorCondition() {<br />
+    while(true) {<br />
+        unstoppable.add(counter);<br />
+        counter++;<br />
+            if(counter % 100000 == 0){<br />
+                System.out.println(counter);<br />
+            }<br />
+        }<br />
+    } </pre><br />
+                                <br />
+                                Exception in thread "main" java.lang.OutOfMemoryError: Java heap space<br />
+                                at java.util.Arrays.copyOf(Arrays.java:2245)<br />
+                                at java.util.Arrays.copyOf(Arrays.java:2219)<br />
+                                at java.util.ArrayList.grow(ArrayList.java:242)<br />
+                                at java.util.ArrayList.ensureExplicitCapacity(ArrayList.java:216)<br />
+                                at java.util.ArrayList.ensureCapacityInternal(ArrayList.java:208)<br />
+                                at java.util.ArrayList.add(ArrayList.java:440)<br />
+                                at chapter9.ForcedStackOverflowError.createErrorCondition(ForcedStackOverflowError.java:20)<br />
+                                at chapter9.TestErrors.main(TestErrors.java:14)<br />
+                                at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                                at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)<br />
+                                at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                                at java.lang.reflect.Method.invoke(Method.java:606)<br />
+                                at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)<br />
+                                <br />
+                                <br />
+
+
+
+
+                        </div>
+
+                    </div><!-- /.blog-main -->
+
+
+
+                
+                <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                    <div class="sidebar-module">
+                        <br>
+                        <h4><b>coderwurst elsewhere</b></h4>
+                        <ol class="list-unstyled">
+                            <li><a href="https://twitter.com/coderwurst">twitter</a></li>
+                            <li><a href="https://www.linkedin.com/pub/andrew-mcmechan/37/251/849">LinkedIn</a></li>
+                            <li><a href="https://www.flickr.com/photos/coderwurst/">flickr</a></li>
+                        </ol>
+                    </div>
+                </div><!-- /.blog-sidebar -->
+
+                </div><!-- /.row -->
+
+            </div><!-- /.container -->
+    </body>
+
+    <footer class="blog-footer">
+                <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>,</p>
+                <p>Continual progressive enhancement by <a href="https://twitter.com/coderwurst">@coderwurst</a>.</p>
+                <p>
+                    <a href="#">Back to top</a>
+                </p>
+            </footer>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>software development</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/blog.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="blog-masthead">
+            <div class="container">
+                <nav class="blog-nav">
+                    <a class="blog-nav-item" href="index.html">home</a>
+                    <a class="blog-nav-item" href="coderwurstBlog.html">journal</a>
+                    <a class="blog-nav-item" href="softwareDev.html">software crafting</a>
+                    <a class="blog-nav-item" href="mobileApps.html">mobile applications</a>
+                    <a class="blog-nav-item" href="aboutme.html">about me</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="blog-header">
+                <br>
+                <h1 align="left"><b>coderwurst</b></h1>
+                <p class="lead blog-description">chapter 6 - programming with Arrays</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-8 blog-main">
+
+                    <div class="blog-post" id="main">
+                        <p><b>arrays</b></p>
+                        <ul>
+                        <li>built into programming languages to handle multiple pieces of data of the same type</li>
+                        <li>arrays can be used to store both primitive data and objects</li>
+                        </ul>
+
+                        <br />
+                        <b>One dimensional Arrays</b><ul>
+                        <li>acts as a container</li>
+                        <li>stores a fixed number of elements</li>
+                        <li>all of SAME data type</li>
+                        <li>indexes start at 0, can be accessedwith myInts[0] etc</li>
+                        <li>arrays are declared with [ ] with the data type before and the name after - normally after the data type</li>
+                        <li>then the new operator is used to intiialise the array - before this is completed it is not considered an object</li>
+                        <li>a number is to be placed inside the brackets to determine the size of the array</li>
+                        <li>square brackets can be used to declare 1D arrays either after the type String [ ] or after the name String myNames [ ], both are valid HOWEVER a number is never palced inside either of these square brackets</li>
+                        <li>the new operator is used to initialise an array, followed by the type and square brackets, this time the [ ] constains the size or length of an array</li>
+                        <li>once an array has been assigned a length, it cannot be changed without re-initialising the array</li>
+                        <li>an array of primitives will be initially set to 0, an array of objects will be initialised to contain null objects</li>
+                        <li>it is also possible to irectly assign an array values after initialising it - this can be done with curley brackets</li>
+                        <i>int [ ] alarms = {730, 900};String [] clockTypes = {"Wrist Watch", "Desk Clock", "Wall Clock"};Clock [ ] clocks = {new Clock(730), newClock(900)};</i>
+                        <li>initialisation with curly brackets must be carried out on the same line...</li>
+                        </ul>
+
+                        <br />
+                        <b>Using 1D arrays</b><ul>
+                        <li>remember that the 1st index is 0</li>
+                        <li>commonly used to compare strings, etc using methods such as equalsIgnoreCase()</li>
+                        <li>also commonly used to get an array length with array.length</li>
+                        <li>arrays can be used to cpoy data from one to the other with the arrayCopy() method - static method, part of the system class</li>
+                        </ul>
+
+                        <i><b>arrayCopy()</b></i><ul>
+                        <li>5 parameters</li>
+                        <li>src parameter - source array</li>
+                        <li>srcPos is the starting position</li>
+                        <li>dest is the destination array where the data will be copied</li>
+                        <li>destPos is the starting position in the destination array where the data is to be copied</li>
+                        <li>length is the number of elements in the destination array</li>
+                        <li>the destination array must also be declared as the same type</li>
+                        <li>other array methods can be found in the Java utils class, including asList, binarySearch, copyOf, CopyOfRange, equals, fill and sort</li>
+                        </ul>
+
+                        <br />
+                        <b>Multi-Dimensional Arrays</b><ul>
+                        <li>an array with more than 1 index (possible to have even 3, 4 or more dimensions)</li>
+                        <li>the language spec has no limits on the number of dimensions, however the JVM places a practical limit of 256</li>
+                        <li>a multi-dimensional array is declared similarly to a 1D array, only with extra [ ] for each additional dimension</li>
+                        <li>they are also initialised similarly to 1D arrays; with a new operator or with the values assigned directly with curly brackets</li>
+                        <li>when using a new operator, it is only needed once at the start of however many brackets follow [ ] [ ] [ ]</li>
+                        <li>remember that whatever is added within the curly brackets must be seperated with a comma</li>
+                        <li>multidimensional arrays do not need to be of the same length</li>
+                        </ul>
+
+                        <br />
+                        <b>Using Multi-directional Arrays</b><ul>
+                        <li>all dimentions need to be accounted for when accessing this type of array</li>
+                        <li>it is also possible to assign a sub-array to a multi-D array</li>
+                        </ul>
+
+                        <br />
+                        <b>ArrayList Object</b><ul>
+                        <li>part of the java.util package</li>
+                        <li>object-orientated representation of a standard array as described above</li>
+                        <li>can be used to store other objects including enumeration types</li>
+                        <li>ArrayLists can be resized dynamically, and can be used to insert objects into the middle of an ArrayList</li><br>
+                        <em>ArrayList &lt;Integer&gt; basicArrayList = new ArrayList &lt;Integer&gt; () ;</em><br><br>
+                        <li>ArrayList objects cannot be used to store primitives as basic arrays can - if a primitive is needed, a wrapper object must be used as above</li>
+                        <li>in the even that a primitive is added directly to an ArrayList, autoboxing places it into an object</li>
+                        <li>the chevrons &lt; &gt; are used to indicate a generic type</li>
+                        <li>the size of an ArrayList is based on the number of objects in it, and an exception will be thrown if the index is not valid, but additional space is automatically built into the array</li>
+                        <li>the default constructor used to create an array list has a capacity of 10 which would return a size of 9</li>
+                        <li>.size() is used to return the length</li>
+                        <li>good coding practice to override the initial constructor with a size much bigger than 10 if the capacity needed is known, to reduce the need to multiple expansions which require quite a high overhead</li>
+                        <li>also, the <i>ensureCapacity(int)</i> method can be called to increase the size of the ArrayList so that it has at least the specified capacity</li>
+                        <li>when an element is inserted into the middle of an array, everything after it is shifted down by one</li>
+                        <li>myArrayList.add(int position, object) to add to a specific location</li>
+                        <li>also, .remove() can be used to remove an index, or to remove an Object .remove(Object o) or .remove (int index)</li>
+                        <li>part of a group of classes that implement the collection interface</li>
+                        </ul>
+
+                        <br />
+                        <b>ArrayList vs StandardArrays</b><ul>
+                        <li>in most cases, ArrayList is likely to be easier to work with - allows for growing or shrinking, allows elements to be added or removed at a valid index, and offers many more methods</li>
+                        <li>however, when efficency is a concern it is worth investigating the use of a basic array due to the overhead created by the expansion or shrinking of an ArrayList</li>
+                        <li>if primitives are to be used, without a wrapper class, a basic array must be used</li>
+                        </ul>
+                        <br>
+
+
+                        </div>
+
+                    </div><!-- /.blog-main -->
+
+
+
+                
+                <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                    <div class="sidebar-module">
+                        <br>
+                        <h4><b>coderwurst elsewhere</b></h4>
+                        <ol class="list-unstyled">
+                            <li><a href="https://twitter.com/coderwurst">twitter</a></li>
+                            <li><a href="https://www.linkedin.com/pub/andrew-mcmechan/37/251/849">LinkedIn</a></li>
+                            <li><a href="https://www.flickr.com/photos/coderwurst/">flickr</a></li>
+                        </ol>
+                    </div>
+                </div><!-- /.blog-sidebar -->
+
+                </div><!-- /.row -->
+
+            </div><!-- /.container -->
+    </body>
+
+    <footer class="blog-footer">
+                <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>,</p>
+                <p>Continual progressive enhancement by <a href="https://twitter.com/coderwurst">@coderwurst</a>.</p>
+                <p>
+                    <a href="#">Back to top</a>
+                </p>
+            </footer>
+</html>

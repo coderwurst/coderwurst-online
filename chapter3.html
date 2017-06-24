@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>software development</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/blog.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="blog-masthead">
+            <div class="container">
+                <nav class="blog-nav">
+                    <a class="blog-nav-item" href="index.html">home</a>
+                    <a class="blog-nav-item" href="coderwurstBlog.html">journal</a>
+                    <a class="blog-nav-item" href="softwareDev.html">software crafting</a>
+                    <a class="blog-nav-item" href="mobileApps.html">mobile applications</a>
+                    <a class="blog-nav-item" href="aboutme.html">about me</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="blog-header">
+                <br>
+                <h1 align="left"><b>coderwurst</b></h1>
+                <p class="lead blog-description">chapter 3 - programming with Java operators and strings</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-8 blog-main">
+
+                    <div class="blog-post" id="main">
+                        <p><b>Java Operators and Strings</b></p>
+                                                <ul>
+                        <li>these are the most fundamental elements of the Java language</li>
+                        <li>Strings are commonly used in Java and throughout the exam</li>
+                        </ul>
+
+                        <br />
+                        <b>Fundamental Operators</b> <ul>
+                        <li>used to return a result from an expression using 1 - 3 operands</li>
+                        </ul>
+
+                        <pre><code>bestCoins = goldCoins++; // has 1 operand
+totalCoins = silverCoins + goldCoins // has 2 operands
+int pirateShares = (isCaptain)?TEN_SHARES : FIVE_SHARES; // 3 operands (only used with ?:) </code></pre><br/>
+                        <br>
+                        <b>Assignment Operator</b> <ul>
+                        <li>used to assign values</li>
+                        <li>'='</li>
+                        <li>moves valid literals into variables</li>
+                        <li>compilation errors occur where an invalid literal is assigned to a variable of an associated type</li>
+                        <li>examples of compilation errors include using TRUE instead of true when assigning a boolean, using a value greater than 127 when assigning a byte value, and when an invalid parameter is passed into an object constructor upon initiation</li>
+                        <li>compound assignment operators included in the exam are += and -= which adds or subtracts a literal value to the current variable value</li>
+                        </ul>
+
+                        <pre><code>goldCoins = goldCoins + 99; is the same as goldCoins += 99;</code></pre> <ul>
+                        <li>the advantage of using compound assignment is the reduction of keystrokes, however it is generally not used as the long hand versions are more readable and there create more maintainable code</li>
+                        </ul>
+
+                        <br>
+                        <b>Arithmetic Operators</b> <ul>
+                        <li>9 in total covered in the exam; 5 basic maths operators for +, -, *, / and %</li>
+                        <li>4 for prefix increment ++aValue, prefix decrement --aValue, postfix increment aValue++, postfix decrement aValue--</li>
+                        <li>the prefix operators allow a shorthand way of incrementing or decrementing a variable by 1</li>
+                        <li>postfix allows for incrementation and decrementation after the value has been evaluated</li>
+                        <li>an example; y = aValue++; sets y to aValue before incrementing aValue by 1</li>
+                        <li>y=aValue++; means that y = aValue and aValue is then aValue++;</li>
+                        <li>y=++aValue; means that y= the newly incremented aValue (aValue +1)</li>
+                        </ul>
+
+                        <br />
+                        <b>Relational Operators</b> <b><br />
+                        </b> <b>Basic Relational Operators</b> <ul>
+                        <li>return boolean values in relation to their left and right operands</li>
+                        <li>&lt;, &gt;, &lt;=, &gt;=</li>
+                        <li>most commonly used with Integer operands, eg. 1 &lt; 2 BUT can also be used with Chars</li>
+                        <li>A is less than 2, therefore A &lt; B is true, as well as the other character evaluations of A and B including unicode, hexidecimal, octal etc.</li>
+                        <li>the same function can be performed with floating point numbers with d, D, f or F postfixes</li>
+                        <li>values such as floating points can be cast as doubles before being compared</li>
+                        </ul>
+
+                        <b>Equality Operators</b> <ul>
+                        <li>== to test if operand left is equal to operand right, or != for not equal to</li>
+                        <li>can test primitive data types, as well as objects</li>
+                        <li>when testing objects, the == operator tests to see if the reference is the same</li>
+                        </ul>
+
+                        <pre><code>Object a = new Object();
+Object b = new Object();
+Object c = b; 
+a != b; // is true b != a; // is also true c == b; // is true</code></pre><br/>
+                        <ul>
+                        <li>if the operands being compared are of different primitive types, <b>BINARY NUMERIC PROMOTION</b> are applied...</li>
+                        <li>double -&gt; float -&gt; long -&gt; when all else fails, int!!!</li>
+                        </ul>
+<br>
+                        </b> <b>Logical Operators</b> <ul>
+                        <li>3 types; logical AND, logical OR and logical negation</li>
+                        </ul>
+
+                        <br />
+                        <b>Logical (Conditional) Operators &amp;&amp; ||</b> <ul>
+                        <li>AND OR statements evaluate their left and right operands, if both are true, they return true</li>
+                        <li>if an AND &amp;&amp; Operator evaluates the left operand and finds it returns false, it doesn't evaluate right operand as the return can only be false - known as a <b>short-circuit operator</b></li>
+                        <li>can also be used to assign a boolean value; boolean myAnswer = operand1 &amp;&amp; operand2; // will assign true or false depending on the results of the left and right operand evaluation</li>
+                        <li>an OR || operator will return true if either the left or right operator is true - again if the left operand is evaluated and found to be true, the process terminates, and the right operand is not evaluated. Instead the true value is returned; also known as a <b>short-circuit operator</b></li>
+                        </ul>
+
+                        <b>Logical Invertion Operator</b> <ul>
+                        <li>a.k.a.Boolean invert operator</li>
+                        <li>used to return the opposite of a boolean value</li>
+                        <li>for example, !false; returns true</li>
+                        <li>!!true; returns true</li>
+                        <li>!!!true; returns false</li>
+                        <li>!!!!true; returns true</li>
+                        <li>logical invertion operator cannot be used on a non-boolean value, for example !STRING will not compile. However, (!"STRING".equal("STRING")); would compile and compute</li>
+                        </ul>
+
+                        <br />
+                        <b>Understanding Operator Precedence</b> <ul>
+                        <li>the order which operators will be evaluated when several operators are found in the same expression</li>
+                        <li>the higher precedence operator will always be evaluated first</li>
+                        <li>operator precedence can be overridden with the use of parentheses</li>
+                        <li>(1+2+3) is equal to 6, (1+2*3) is equal to 7, but ((1+2)*3) is equal to 9</li>
+                        </ul>
+
+                        <br>
+                        <b>Using String Objects and Their Methods</b> <ul>
+                        <li>used to represent 16-bit unicode character strings (bits for each character added onto the bits for the next character)</li>
+                        <li>strings are <b>IMMUTABLE</b> - cannot be changed</li>
+                        <li>string.replace("something", "another thing") will not change the contents of string, instead a new variable, eg string2, needs to be created</li>
+                        <li><b>String</b> class - creates an immutable string object, eg. String myString = ""; or String myString = new String (); or String myString = new String ("");</li>
+                        <li><b>StringBuilder</b> - creates a mutable string object</li>
+                        <li><b>StringBuffer</b> - creates a mutable, thread safe String object</li>
+                        <li>a previous string held in a reference variable can, however, be replaced with a new string</li>
+                        </ul>
+
+                        <b>String Concatenation</b> <ul>
+                        <li>+ used to join strings together</li>
+                        <li>functions on left associative...</li>
+                        </ul>
+
+                        <pre><code>x = 5, y = 5;
+sout(x + y + " is the total"); 
+-> 10 is the total; nothing on left hand side of ints to associate sout((x + y) + " is the total");
+-> 10 is the total; nothing on left hand side of ints to associate, parentheses used to seperate out x + y sout("the total is " + (x + y)); 
+-> the total is 10; sting on left hand side of ints to associate, but parentheses used to seperate out x + y sout "the total is " + x + y)); 
+-> the total is 55; no parentheses used to seperate out x + y, therefore the x and y values are concatenated <br></code></pre>
+
+
+                        <br />
+                        <b>the toString Method</b> <ul>
+                        <li>all classes extend this class by default, therefore all inherit this method</li>
+                        <li>uses the String concatenation operator</li>
+                        <li>often overridden to return the most appropriate information needed to describe the object</li>
+                        <li>must be careful when printing out integers that don't have a String as an initial value</li>
+                        </ul>
+
+                        eg. <br />
+                        <pre><code>String title1 = "shovels.";
+String title2 = "Shovels:";
+int flatShovels = 5;
+int roundShovels = 6; <br />
+Sout(flatShovels + roundShovels + title1); // 11 Shovels Sout((flatShovels + roundShovels) + titls1);
+// 11 Shovels Sout(title2 + flatShovels + roundShovels);
+// Shovels: 56 Sout(title2 + (flatShovels + roundShovels)); // Shovels: 11 <br></code></pre>
+                        <br>
+                        <b>Methods of the String Class</b><br>
+
+                        <b>The charAt Method</b> <ul>
+                        <li>returns a Char primitive value from the specified int index</li>
+                        <li>note that indexes, as with arrays, starts at 0</li>
+                        <li>public char charAt(int index) char c1 = string.charAt(3); </li>
+                        </ul>
+
+                        <br />
+                        <b>The indexOf Method</b> <ul>
+                        <li>returns a primitive int representing the index of a char or string in a relationship to the referenced string object</li>
+                        <li>.indexOf('u'); ..indexOf('u', 9) // starts from index 9 </li>
+                        <li>the above examples can also be used with Strings</li>
+                        <li>if no occurrence is found, the method returns a -1</li>
+                        </ul>
+
+                        <b>The length Method</b> <ul>
+                        <li>returns a primitive int value representing the number of characters in a given String</li>
+                        <li><b>WOFIE - string method for length uses paranthesese .length() whereas arrays use an instance variable in their state, array.length; somethign to look out for in exam</b></li>
+                        </ul>
+
+                        <b>The concat Method</b> <ul>
+                        <li>can be used to add another string onto a previous string</li>
+                        <li>myString.concat(string2);</li>
+                        </ul>
+
+                        <b>The replace Method</b> <br />
+                        <ul>
+                            <li>.replace(char oldChar, char newChar) or .replace(CharSequence string1, CharSequence string2)</li>
+                        <li>replaces the old with the new</li>
+                        <li>CharSequence interface allows for the use of String, StringBuffer or StringBuilder objects</li>
+                        </ul>
+
+                        <b>The startsWith Method</b> <ul>
+                        <li>can be used to determine if a String starts with a defined String</li>
+                        <li>the start point of the evaluation can also be offset</li>
+                        <li>returns a boolean value</li>
+                        <li>.startsWith(String prefix) or .startsWith(String prefix, int offset)</li>
+                        </ul>
+
+                        <b>The endsWith method</b> <ul>
+                        <li>similar to startsWith, but only one possible method declaration</li>
+                        <li>to determine if a string ends with a defined suffix</li>
+                        <li>.endsWith(String suffix) <br /></li>
+                        </ul>
+
+                        
+                        <b>The subString method</b> <ul>
+                        <li>used to return a snippet of a particular string</li>
+                        <li>ints declared as the start and end point of the substring</li>
+                        <li>.subString(9) will cut out a string from index 9 to the end .subString(9,10) will cut out a single character at index 9 .subString(9, 23) will cut out from index 9 - 23 .subString(9,8) is out of range .subString(9,9) will return a blank</li>
+                        </ul>
+
+                    
+                        <b>The trim Method</b> <ul>
+                        <li>used to remove leading or trailing white spaces from strings</li>
+                        </ul>
+
+                        <b>the toLowerCase and toUpperCase Methods</b> <ul>
+                        <li>will convert a string to its lower or upper case equivalent</li>
+                        </ul>
+
+                        string.toLowerCase(); or string.toUpperCaselocale locale) can be used <br />
+                        <b>The equalsIgnoreCase Method</b> <ul>
+                        <li>compares contents of 2 strings and returns true if contents match, ignoring any case differences</li>
+                        <li>string1.equalsIgnoreCase("this String"); <br /></li>
+                        </ul>
+
+                        
+                        <br />
+                        <b>Chaining</b> <ul>
+                        <li>method1.method2.method3 can be used to perform a number of String methods in the same line of code</li>
+                        <li>after chained method calls, it is also possible to concatenate the newly formed string, eg. + "."</li>
+                        <li>string.trim().replace("string1", "string2").substring(0,43) + "."; <br /></li>
+                        </ul>
+
+                        
+                        <br><b>Using StringBuilder Objects and Their Methods</b><br />
+                        <ul>
+                        <li>StringBuilder class represents a mutable character string</li>
+                        <li>StringBuffer represents a mutable, thread-safe character string</li>
+                        </ul>
+
+                        <p><b>Most common StringBuilder methods: </b><p/>
+                        <b>The append Method</b> <ul>
+                        <li>appends sullplied data as a character string</li>
+                        <li>can be used to append String, Object, StringBuffer, charSequence, char, boolean, int, long, float and doubles</li>
+                        <li>but all converted to char types in the final string</li>
+                        </ul>
+
+                        <b>The insert Method</b> <ul>
+                        <li>allows you to insert a string representation of the supplied data at a specified point</li>
+                        <li>string.insert(int offset, String myString); <br /></li>
+                        </ul>
+
+                        
+                        <b>The delete Method</b> <ul>
+                        <li>removes characters in a substring</li>
+                        <li>string.delete(int start, int end); <br /></li>
+                        </ul>
+
+                        
+                        <b>The deleteCharAt Method</b> <ul>
+                        <li>removes the character at the specified index</li>
+                        <li>string.deleteCharAt(11); <br /></li>
+                        </ul>
+
+                        
+                        <b>The reverse Method</b> <ul>
+                        <li>string.reverse();</li>
+                        </ul>
+
+                        <b>Test Equality Between Strongs and other Objects</b> <br />
+                        == || .equals() <ul>
+                        <li>when comparing char Strings between 2 strings, the .equals() should be used</li>
+                        <li>== returns true if the REFERENCES are the same, not the content</li>
+                        </ul>
+
+                        <pre><code>String myString = "Hello World";
+String string2 = myString; // using == for the above strings would return true! </code></pre>
+          
+
+
+                        </div>
+
+                    </div><!-- /.blog-main -->
+
+
+
+                
+                <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                    <div class="sidebar-module">
+                        <br>
+                        <h4><b>coderwurst elsewhere</b></h4>
+                        <ol class="list-unstyled">
+                            <li><a href="https://twitter.com/coderwurst">twitter</a></li>
+                            <li><a href="https://www.linkedin.com/pub/andrew-mcmechan/37/251/849">LinkedIn</a></li>
+                            <li><a href="https://www.flickr.com/photos/coderwurst/">flickr</a></li>
+                        </ol>
+                    </div>
+                </div><!-- /.blog-sidebar -->
+
+                </div><!-- /.row -->
+
+            </div><!-- /.container -->
+    </body>
+
+    <footer class="blog-footer">
+                <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>,</p>
+                <p>Continual progressive enhancement by <a href="https://twitter.com/coderwurst">@coderwurst</a>.</p>
+                <p>
+                    <a href="#">Back to top</a>
+                </p>
+            </footer>
+</html>

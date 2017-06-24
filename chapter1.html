@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>software development</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/blog.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="blog-masthead">
+            <div class="container">
+                <nav class="blog-nav">
+                    <a class="blog-nav-item" href="index.html">home</a>
+                    <a class="blog-nav-item" href="coderwurstBlog.html">journal</a>
+                    <a class="blog-nav-item" href="softwareDev.html">software crafting</a>
+                    <a class="blog-nav-item" href="mobileApps.html">mobile applications</a>
+                    <a class="blog-nav-item" href="aboutme.html">about me</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="blog-header">
+                <br>
+                <h1 align="left"><b>coderwurst</b></h1>
+                <p class="lead blog-description">chapter 1 - packaging, compiling and interpreting</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-8 blog-main">
+
+                    <div class="blog-post" id="main">
+                        <b>Packages</b>
+                        <ul>
+                        <li>most common way of grouping and organising related classes and interfaces</li>
+                        <li>though of as containers for classes &amp; define where that will be located in the hierarchical directory structure</li>
+                        <li>decreases likelihood of classes colliding</li>
+                        <li>promotes code reuse, maintainability, O-O encapsulation and modularity</li>
+                        <li>also allows for classes across a normal or large piece of software to have the same name - as long as they are in separate packages</li>
+                        </ul>
+                        <br>
+                        <b>Import Statements</b>
+                        <ul>
+                        <li>java.lang is imported into each java class by default</li>
+                        <li>package com.example.package at the top of a source file will locate the class within a package - only association with 0 or 1 package is possible</li>
+                        <li>import and then package name to important the components of any package</li>
+                        <li>use * to import all classes of a package, or .className to import a specific class</li>
+                        <li>convention dictates package name to be a reverse domain name com.example.package but can also be package example.package || package example_package</li>
+                        <li>the package name equates to a directory structure path/example/package or path/example?package</li>
+                        <li>package names java and java are reserved</li>
+                        <li>individual names with a package name to be separated with an underscore</li>
+                        <li>one import statement per package</li>
+                        <li>import keyword followed by path to package directory</li>
+                        <li>some useful packages to know:<ul>
+                        <li>basic graphics and images - import java.awt.*</li>
+                        <li>lightweight GUI components - import java.swing.*</li>
+                        <li>data streams - import java.io.*</li>
+                        <li>networking application - import java.net.*</li>
+                        <li>collections framework, event model &amp; date.time facilities - import java.util.*</li>
+                        <li>core java classes and interfaces - import java.lang.* (core package, imported by default)</li>
+                        </ul>
+
+                        </li>
+                        <li>for maintenance purposes it is better to call classes specifically rather than using *</li>
+                        </ul>
+
+                        <br />
+                        <b>Static Imports</b> <ul>
+                        <li>allow specific package elements to be imported</li>
+                        <li>for example import static java.util.Locale.ITALY imports the local it_IT</li>
+                        <li>sout calls which use ITALY would print this information, and this information only</li>
+                        <li>import java.utils.* would allow the system to also print out the locals for GERMANY (de_DE) etc.</li>
+                        </ul>
+
+                        <br />
+                        <b>Example Exercise</b> <ul>
+                        <li>given an example snippet using implicit import calls, asked to replace with explicit alternatives</li>
+                        <li>p9 - return to at end of chapter</li>
+                        </ul>
+
+                        <br/>
+                        <b>Understanding Packaged Derived Classes</b> <br />
+                        <ul>
+                        <li>total of 209 packages in Java 7</li>
+                        <li>most important are:<ul>
+                        <li>utilities</li>
+                        <li>basic input/ output</li>
+                        <li>networking API</li>
+                        <li>Abstract Window Toolkit API</li>
+                        <li>Swing API</li>
+                        </ul>
+
+                        </li>
+                        </ul>
+                        <br>
+                        <b>Java Utilities API</b> <ul>
+                        <li>java.util</li>
+                        <li>classes are arranged into categories such as Framework, Date &amp; Time, Internationalisation, and others</li>
+                        <li>THe Java collections framework contains fundamental data structures necessary to build Java Applications</li>
+                        
+
+                        <li>List - ArrayList, LinkedList, Vector - all data structures based on positional access Map - Hashmap, Hashtable, LinkedHashMap, TreeMap - structures that map keys to values Set - Hashset, LinkedHashSet, TreeSet - data structures based on element uniqueness Queue Interfaces - PriorityQueue - FIFO manner usually used in queues, priority queues order elements accoring to a supplied comparator</li>
+                        
+                        <li>the comparator interface is there to assist when ordering is not natural</li>
+                        <li>not to be confused with the comparator in the java.lang package, which is to sort objects by their natural ordering</li>
+                        <li>Data, Calender and TimeZone classes are also in .util</li>
+                        <li>Locale class used for geographical regions</li>
+                        <li>Currency class represents curriencies</li>
+                        <li>Random class includes a random number generator</li>
+                        <li>StringTokenizer class can split a string into tokens</li>
+                        <li>there are many more, perhaps used onn the job. Diagram on page 11 shows various possibilities</li>
+                        </ul>
+
+                        NB packages can also contain subpackages to further help with the parent package. .util.regex includes regular expressions. Subclasses tend to have unique fuinctionality relating to the parent class <br/>
+
+                        <br>
+                        <b>Java basic input/ output API</b> <ul>
+                        <li>both combined in Java.io</li>
+                        <li>provides functionality for general system input and output</li>
+                        <li>includes data streams, serialisation, file system</li>
+                        <li>subclasses include InputStream and OutputStream for the bytestream class</li>
+                        <li>characterStream subclasses include Reader and Writer classes</li>
+                        <li>other important classses include the File, FileDescriptor, FilenameFilter and RandomAccessFile which all allow foe the creation, manipulation and removal of files</li>
+                        </ul>
+                        
+                        <br/>
+                        <b>Java Networking API</b> <ul>
+                        <li>contained in the package java.net</li>
+                        <li>allows for the creation of network based applications</li>
+                        <li>Classes include Socket (client side), ServerSocket (server side), URL,m Inet4Address, Inet6Address</li>
+                        </ul>
+
+                        <b>Java Abstract Window Toolkit</b> <ul>
+                        <li>java.awt</li>
+                        <li>can create heavyweight components in regards to UX</li>
+                        <li>and associated graphics and images</li>
+                        <li>has since been superseded with SWING, but certain pieces of .awt are still used</li>
+                        <li>eg the FocusSubsystem which allows navigation between components</li>
+                        </ul>
+
+                        <b>Java Swing API</b> <ul>
+                        <li>javax.swing</li>
+                        <li>functionalight for lightweight containers and components</li>
+                        <li>more sophisticated set of UI components than AWT</li>
+                        <li>previous elements in AWT, eg button, are simply preceded with a J in SWING , JButton</li>
+                        <li>javax.swing.* imports all inc buttons, tables, dialog boxes</li>
+                        <li>swing.text for textual elements only</li>
+                        <li>swing.platf.* to import elements to allow for the implementation and configuration of basic pluggable look and feel support (allowing for universal style changes of the GUI's components. Also included are tooltips, accessibility functionality, event model, tables, trees, etc.</li>
+                        <li>swing.event.* for event listeners and adapters</li>
+                        <li>other examples include JFrame, JPanel, JToolTip - see p 15</li>
+                        <li>swing takes advantage of the MVC (Modal-View-Controller) architecture - not needed for exam</li>
+                        <li>note that SWING is to be replaced with FX javafx</li>
+                        </ul>
+
+                        <br/>
+                        <b>Understand Class Structure</b> <br />
+                        <b>Naming Conventions</b> <ul>
+                        <li>rules for the usage/ application of characters in the creation of identifiers, methods, class names, etc in a java code base</li>
+                        <li>very important for maintainability</li>
+                        
+
+                        <li><a href="https://www.thc.org/root/phun/unmaintain.html">https://www.thc.org/root/phun/unmaintain.html</a> for how not to do it </li>
+                        <li><a href="http://chadfowler.com/">http://chadfowler.com/</a> and the book the Passionate Programmer, how to do it <br /></li>
+                        </ul>
+                        <br>
+                        <b>Class Structure</b> <ul>
+                        <li>every Java program has at least 1 class</li>
+                        <li>a class has a signature, optional constructors, data members and methods</li>
+                        </ul>
+
+                        <pre>
+                        <code>
+modifier] class ClassName [extends superClassIdentifier] [implements 
+interfaceIdentifier 1, interfaceIdentifier2, etc] { <br>
+[constructor]
+[data members]
+[methods]<br>
+}
+                        </code>
+                    </pre>
+                        <ul>
+                        <li>each class can only extend 1 super class but may implement 1 or more interfaces (seperated by commas)</li>
+                        <li>methods can use @overrride notation to replace methods in super Classes with the same name</li>
+                        </ul>
+
+                        <br><b>Compile &amp; Interpret Java Code</b> <br />
+                        <ul>
+                        <li>JDK has a number of tools available, look inside package for range of functions</li>
+                        <li>javac used to cimpile source code into bytecode</li>
+                        <li>javac [options] [filename]</li>
+                        </ul>
+
+                        <br />
+                        <b>-d option</b> <ul>
+                        <li>allows user to determine in which directory the compiled code will do</li>
+                        </ul>
+
+                        <em>[present working directory]\classes\com\ocajexam\tutorial\GreetingsUniverse.class</em>
+                        <br> <br>
+                        <b>-classpath option</b> <ul>
+                        <li>used to tell the JVM where user-defined classes and packages are located</li>
+                        <li>can also be shortened to -cp</li>
+                        <li>-d can still be used as follows, to ensure that the bytecode goes into the classes directory</li>
+                        </ul>
+
+                        <em>javac -d classes -cp 3rdPartyCode\classes;. GreetingsUniverse.java</em> <br><br>
+                        <ul>
+                        <li>no need to use -cp if the files are in the present working directory</li>
+                        <li>also no need if the classpath is defined in the environmental variable CLASSPATH</li>
+                        <li>NB that in windows systems, paths are with \; and delimited with semi-colons, not /: as with (POSIX) UNIX, delimited with colons</li>
+                        <li>for the exam, it is important to know the different types of <b>switches</b>: also known as <b>command-line parameters</b>, <b>command-line switches</b>, <b>options</b> and <b>flags</b></li>
+                        </ul>
+
+                        <br />
+                        <b>Interpreting Java code</b> <ul>
+                        <li>java [filename] on compiled code</li>
+                        <li>takes byte code and runs program</li>
+                        <li>on a windows machine, javaw.exe [filename] can be used to open the program and close the console</li>
+                        <li>on a linux machine, java [filename] &amp; can be used to run the program in the background</li>
+                        <li>may be required to declare where certain classes are kept before running the program, again this can be accomplished with the <b>-cp</b> or <b>-classpath</b> option</li>
+                        <li>in the event that all the required classes are included in 1 package - as they should be - it is possible to point the interpreter at the base folder of the package (com.coderwurst.project) to include all classes under this package</li>
+                        <li>when interpreting code, the <b>-D</b> option allows properties within class files to be updated</li>
+                        </ul>
+                        <br>
+                        <b>Interpreter Version</b> <br />
+                        <ul>
+                        <li> - version can be used with the interpreter to return the version of the JVM and exit</li>
+                        <li>a number of additional arguments can also be used with this command, with varying results</li>
+                        </ul> <br>
+                        </div>
+
+                    </div><!-- /.blog-main -->
+
+
+
+                
+                <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                    <div class="sidebar-module">
+                        <br>
+                        <h4><b>coderwurst elsewhere</b></h4>
+                        <ol class="list-unstyled">
+                            <li><a href="https://twitter.com/coderwurst">twitter</a></li>
+                            <li><a href="https://www.linkedin.com/pub/andrew-mcmechan/37/251/849">LinkedIn</a></li>
+                            <li><a href="https://www.flickr.com/photos/coderwurst/">flickr</a></li>
+                        </ol>
+                    </div>
+                </div><!-- /.blog-sidebar -->
+
+                </div><!-- /.row -->
+
+            </div><!-- /.container -->
+    </body>
+
+    <footer class="blog-footer">
+                <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>,</p>
+                <p>Continual progressive enhancement by <a href="https://twitter.com/coderwurst">@coderwurst</a>.</p>
+                <p>
+                    <a href="#">Back to top</a>
+                </p>
+            </footer>
+</html>

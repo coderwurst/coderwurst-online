@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>software development</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/blog.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="blog-masthead">
+        <div class="container">
+            <nav class="blog-nav">
+                <a class="blog-nav-item" href="index.html">home</a>
+                <a class="blog-nav-item" href="coderwurstBlog.html">journal</a>
+                <a class="blog-nav-item" href="softwareDev.html">software crafting</a>
+                <a class="blog-nav-item" href="mobileApps.html">mobile applications</a>
+                <a class="blog-nav-item" href="aboutme.html">about me</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="blog-header">
+            <br>
+            <h1 align="left"><b>coderwurst</b></h1>
+            <p class="lead blog-description">chapter 10 - working with classes and their relationships</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-8 blog-main">
+
+                <div class="blog-post" id="main">
+                    <p><b>relationships</b></p>
+                    <ul>
+                        <li>often described in terms of association and composition</li>
+                        <li>2 general terms for object relationships, which encompass 4 types of relationship descriptors; direct association, composition association, aggregation association and temporary association</li>
+                    </ul>
+
+                    <br />
+                    <b>Class Compositions and Associations</b><ul>
+                    <li>relationships are formed between 2 objects when 1 contains a reference to another</li>
+                    <li>the reference is often stored as an instance variable</li>
+                    <li>this reference may be uni or bi directional</li>
+                    <li><b>association</b> is a relationship between 2 objects, where neither one directly depends on the other for its logical meaning</li>
+                    <li>this means, in an association relationship the link between the 2 objects could be disconnected, and they would still have logical meaning - weak relationship</li>
+                    <li>objects in an association relationship have no dependance on each other for the management of their life cycle- the existence of one is not dependant on the existence of another</li>
+                    <li>think of a CarFactory and a CarFrame example, a factory can produce cars with numerous types of frames</li>
+                    <li>a <b>composition</b> relationship is a stronger type of relationship - one object is composed of another</li>
+                    <li>an object may be composed of multiple objects, not just between 2</li>
+                    <li>if the connection is lost, these objects have no longer any logical meaning</li>
+                    <li>this tends to be a more abstract relationship - think of a Car and CarStatus objects, one cannot exist without the other</li>
+                    <li>objects that control the life cycle of another object tend to have a composite relationship</li>
+                    <li>usually some level of interpretation is needed to determine the type of relationship between 2 objects</li>
+                    <li>a composition relationship between 2 objects will always be responsible for an object's life cycle, objects in association tend to make more sense by themselves than objects of composition</li>
+                </ul>
+                <br>
+                <b>Class Relationships<br />
+                    1. Direct Association</b><ul>
+                    <li>"has" a relationship</li>
+                    <li>basic level of association (default), represents navigability</li>
+                    <li>weak association, generalised into an association</li>
+                    <li>no life cycle responsibility and each object is conceptually independent</li>
+                    <li>think of Truck and Trailer Object - weakly associated, both could be used without the other</li>
+                    <li>represented in Unified Modeling Language (UML) as as a single arrow</li>
+                </ul>
+
+                <br />
+                <b>2. Composition Association</b><ul>
+                <li>one object is composed of 1 or more objects</li>
+                <li>strong relationship, generalised as a composition</li>
+                <li>the internal object will make only conceptual sense while stored in the containing object</li>
+                <li>this relationship tends to reflect ownership - Object A is composed of Object B</li>
+                <li>Think of a Tyre and RubberStrips example</li>
+                <li>the containining object (Type) is responsible for managing the life cycle of the internal object, this responsibility can also be passed to another object</li>
+                <li>a reference from the containing object must always be held to the internal object, otherwise it will be garbage collected</li>
+            </ul>
+
+            <br />
+            <b>3. Aggregation Association</b><ul>
+            <li>1 object is a part of another object - "part of" the whole relationship</li>
+            <li>one object is part of the other, each object can maintain its own meaning independantly if the relationship is lost</li>
+            <li>neither object depends on the other for its existence</li>
+            <li>no need for life cycle management</li>
+            <li>weak relationship that can be generalised as an association</li>
+            <li>think of a Motorcycle and a windshield object - weakly associated as both could be used without the other and still maintain the initial purpose</li>
+            <li>but the windshild is "part of" the motorcycle</li>
+        </ul>
+
+        <br />
+        <b>4. Temporary Association</b> <ul>
+        <li>also known as a dependency</li>
+        <li>typically local variables are temporary associations, but also a return value or a method parameter</li>
+        <li>although Object A will depend on Object B, it will not persist for the entire life cycle of the object</li>
+        <li>For example, a Car Object may have a mthod to Start Engine, which requres a Key Object as a parameter</li>
+    </ul>
+
+    <br />
+    <b>Multiplicities</b><ul>
+    <li>every relationship has one</li>
+    <li>represent the number of objects that are part fo the relationship</li>
+    <li>one to one, one to many &amp; many to many</li>
+</ul>
+
+<b>One-to-One Multiplicity</b><ul>
+<li>basic relationship where one object contains a reference to one other object</li>
+<li>Eg. Motorcycle Object to Engine Object</li>
+<li>all 4 of the above objects may have a 1-1 relationship</li>
+</ul>
+
+<b>One-to-Many Multiplicity</b><ul>
+<li>one object contains references to a group of objects</li>
+<li>the multiple objects are usually stored as an array or a collection</li>
+<li>all 4 of the above relationship types may be 1-many</li>
+<li>Eg. Car has 4 Tyre Objects, the type is 'part of' the car - aggregation association</li>
+</ul>
+
+<b>Many-to-Many Multiplicity</b><ul>
+<li>only possible for aggregation associations, direct and temporary</li>
+<li>i.e. not for composition, due to the fact that is many object have a relationship with an object, it is impossible for any individual object to control the life cycle of another object</li>
+<li>EG. a traffic simulator program; many Car Objects, with further references to many TrafficLight Objects. The relationship between the Car and the Traffic light is weak, and all traffic light objects are shared with all the cars</li>
+<li>a many to many association fors not have to have an equal number of objects on each side of the relationship</li>
+</ul>
+
+<b>Association Navigation</b><ul>
+<li>used to describe the direction in which a relationship can be travelled</li>
+<li>an object within another object is said to be navigable is the containing object has methods for accessing the inner object</li>
+<li>most relationships are navigable in 1 direction, but if both objects contain references to the other, it is possible to have bi-directional navigational relationship</li>
+<li>getters and setters are used here</li>
+</ul>
+
+<br />
+<b>Class Compositions and Associations in Practice<br />
+    Examples of Class Association Relationships</b><ul>
+    <li><b>one-to-one class association Truck - Trailer example</b><ul>
+        <li>Truck object, contains reference to the trailer object and a method to set the trailer object</li>
+        <li>the trailer object is a single variable (not in an array or a collection) and is therefore a 1-1 relationship</li>
+        <li>direct association; truck object not responsible for trailer life cycle, and we can say that the truck 'has a' trailer object</li>
+        <li>this type of relationship can be generalized to an association relationship</li>
+    </ul>
+
+</li>
+<li><b>one-to-many class association - Car - Wheel example</b><ul>
+    <li> aggregation association as the wheel is 'part of' the car object</li>
+    <li>one to many relationship as 1 car has 4 wheels, wheel objects stored in an array via the setWheels method</li>
+    <li>weak relationship and no life cycle dependencies, therefore this can be generalised as a association relationship</li>
+</ul>
+
+</li>
+<li><b>many-to-many class association - Car - Traffic Light example</b><ul>
+    <li>more complex example than the first 2</li>
+    <li>groups of car objects, groups of traffic light objects</li>
+    <li>3rd class in this example is the traffic simulator - key to understanding the relationships</li>
+    <li>TrafficLight object contains an id reference</li>
+    <li>Car Oject contains a reference to all the traffic lights</li>
+    <li>Simulator instantiates a TrafficSimulator Object, which contains an array of Car objects and an array of Traffic Light objects. Each TrafficLight object is assigned a unique id, then the car objects are created and this array of TrafficLight objects is passed in</li>
+    <li>this can be said to be a direct association, as each Car have an array containing the TrafficLight objects</li>
+</ul>
+
+</li>
+</ul>
+
+<b>Examples of Class Composition Relationships</b><ul>
+<li> <b>one-to-one composition - Tyre and TyreAirPressure</b><ul>
+    <li>the tyre object is 'composed of' the TyreAirPressure obect - composition association</li>
+    <li>strong relationship</li>
+    <li>Tyre is reposnsible for the life cycle of the TyreAirPressure Object</li>
+    <li>if the Type were destroyed, the AirPressure would also be gone</li>
+</ul>
+
+</li>
+<li><b>one-to-many composition - CarComputer - SensorStatus obect</b><ul>
+    <li>the CarComputer object is composed of an array of 5 sensors - one-to-many relationaship</li>
+    <li>the relationship is a composition association</li>
+    <li>strong relationship, SensorStatus depends on the CarComputer to survive</li>
+</ul>
+
+</li>
+</ul>
+
+<b>Examples of Association Navigation</b><ul>
+<li>PinStripe object 'composed of' a Colour object</li>
+<li>PinStripe object contains a method to get the colour object</li>
+<li>therefore, any object that has access to the PinStripe object could use this method to return a colour</li>
+<li>this relationship allows navigation in 1 direction only</li>
+</ul>
+
+
+
+
+
+</div>
+
+</div><!-- /.blog-main -->
+
+
+
+
+<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+    <div class="sidebar-module">
+        <br>
+        <h4><b>coderwurst elsewhere</b></h4>
+        <ol class="list-unstyled">
+            <li><a href="https://twitter.com/coderwurst">twitter</a></li>
+            <li><a href="https://www.linkedin.com/pub/andrew-mcmechan/37/251/849">LinkedIn</a></li>
+            <li><a href="https://www.flickr.com/photos/coderwurst/">flickr</a></li>
+        </ol>
+    </div>
+</div><!-- /.blog-sidebar -->
+
+</div><!-- /.row -->
+
+</div><!-- /.container -->
+</body>
+
+<footer class="blog-footer">
+    <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>,</p>
+    <p>Continual progressive enhancement by <a href="https://twitter.com/coderwurst">@coderwurst</a>.</p>
+    <p>
+        <a href="#">Back to top</a>
+    </p>
+</footer>
+</html>
