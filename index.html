@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="coderwurst home page">
+        <meta name="author" content="coderwurst">
         
         <title>coderwurst</title>
 
@@ -16,50 +16,50 @@
         <link href="css/jumbotron-narrow.css" rel="stylesheet">
         <link href="css/blog.css" rel="stylesheet">
 
-        <!-- carousel components -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!-- twitter timeline script -->
+        <script>
+            window.twttr = (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+              if (d.getElementById(id)) return t;
+              js = d.createElement(s);
+              js.id = id;
+              js.src = "https://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
 
-        <style>
-        .carousel-inner > .item > img,
-        .carousel-inner > .item > a > img {
-            width: 90%;
-            margin: auto;
-        }
-        </style>
+              t._e = [];
+              t.ready = function(f) {
+                t._e.push(f);
+              };
+
+              return t;
+            }(document, "script", "twitter-wjs"));
+        </script>
     </head>
 
     <body>
         <br>
-            <h1 align="center"><b>coderwurst.com</b></h1>
-            <p class="lead" align="center"><a href="coderwurstBlog.html">journal</a> - <a href="softwareDev.html">software crafting</a> - <a href="mobileApps.html">mobile applications </a> - <a href="architecturalDesign.html">architecture & design</a></p>
+            <h1 align="center"><b>coderwurst online</b></h1>
+            <p class="lead" align="center"><a href="coderwurstBlog.html">rambles</a> - <a href="softwareDev.html">development</a> - <a href="mobileApps.html">apps</a></p>
         <div class="container">
 
             <div class="jumbotron">
-                <div class="container">
-                    <div id="flickr-carousel" class="carousel slide" data-ride="carousel" data-interval="8000" alt="loading...">
-                    </div>
+                <div class="container tweet-port">
+                    <a class="twitter-timeline" href="https://twitter.com/coderwurst" data-theme="dark" data-chrome="noheader" data-tweet-limit="10" data-dnt="true">Tweets by @coderwurst</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8" ></script>
+                    </a>
                 </div>
             </div>
 
             <footer class="footer">
-                   <ul>
-
-                    <!-- Twitter account link -->
-                    <a href="https://twitter.com/coderwurst" class="twitter-button"><img src="images/twitter.png" alt="Twitter" /></a>
-                    <!-- LinkedIn account link -->
-                    <a href="https://www.linkedin.com/pub/andrew-mcmechan/37/251/849" class="linkedIn-button"><img src="images/linkedin.png" alt="LinkedIn" /></a>
-                    <!-- Flickr account link -->
-                    <a href="https://www.flickr.com/photos/coderwurst/" class="flickr-button"><img src="images/flickr.png" alt="Flickr" /></a>
-                    <a href="https://github.com/coderwurst" class="github-button"><img src="images/github.png" alt="Flickr" /></a>
-
-                    <p>say <a href="mailto:hello@coderwurst.com">hello@coderwurst.com</a><br>
-
-                    <a href="/aboutme.html">coderwurst</a> 2015</p>
+                <ul>
+                    <a href="https://twitter.com/coderwurst" class="twitter-button"><img src="images/twitter.png" 
+                      alt="Twitter" /></a>
+                    <a href="https://github.com/coderwurst" class="github-button"><img src="images/github.png" 
+                      alt="GitHub" /></a>
+                    <p>say <a href="mailto:coderwurst@gmail.com"> hello</a><br>
+                    <a href="/aboutme.html">coderwurst</a> 2017</p>
                 </ul>
             </footer>
         </div> <!-- /container -->  
-        <script type="text/javascript" src="js/jquery.twbsFlickrCarousel.js"></script>
-        <script type="text/javascript" src="js/jquery.twbsPagination.js"></script>
     </body>
 </html>

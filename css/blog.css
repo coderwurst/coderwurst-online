@@ -30,6 +30,15 @@ h6, .h6 {
   }
 }
 
+/*
+ * Twitter Feed
+ */
+.tweet-port {
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 
 /*
  * Masthead for nav
