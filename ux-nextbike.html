@@ -10,7 +10,7 @@
     <title>UX Analysis nextbike</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
-    <link rel="stylesheet" href="/css/coderwurst.css" />
+    <link rel="stylesheet" href="./css/coderwurst.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
@@ -20,7 +20,7 @@
             <div class="mdl-layout__header-row portfolio-logo-row">
                 <span class="mdl-layout__title">
                     <div class="portfolio-logo"></div>
-                    <span class="mdl-layout__title">nextbike - <a href="https://www.nextbike.de/de/">https://www.nextbike.de/de/</a></span>
+                    <span class="mdl-layout__title">coderwurst</span>
                 </span>
             </div>
             <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
@@ -31,6 +31,7 @@
                     <a class="mdl-navigation__link" href="./about.html">about me</a>
                 </nav>
             </div>
+            
         </header>
         <div class="mdl-layout__drawer mdl-layout--small-screen-only">
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
@@ -44,45 +45,48 @@
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">UX Analysis</h2>
-                    </div>
-                    <div class="mdl-card__media">
-                        <img class="article-image" src=" images/portfolio-example-01.jpg" border="0" alt="">
+                        <h2 class="mdl-card__title-text">Next Bike Bike Rental (Bonn, Germany)</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <strong>Includes</strong>
-                        <span>UX</span>
+                        <span>ux, wireframes</span>
                     </div>
+                    <div class="mdl-card__media">
+                        <img class="article-image" src=" images/nextbike-start.png" border="0" alt="nextbike home page">
+                    </div>
+                    
+                    
                     <div class="mdl-grid portfolio-copy">
-                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Part 1: Current State Analysis</h3>
-                        <div class="mdl-cell mdl-cell--6-col mdl-card__supporting-text no-padding">
-                            <p>
-                                Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet. Voluptate voluptate irure occaecat deserunt incididunt esse in. Sunt velit aliquip sunt elit ex nulla reprehenderit qui ut eiusmod ipsum do. Duis veniam reprehenderit laborum occaecat id proident nulla veniam. Duis enim deserunt voluptate aute veniam sint pariatur exercitation. Irure mollit est sit labore est deserunt pariatur duis aute laboris cupidatat. Consectetur consequat esse est sit veniam adipisicing ipsum enim irure.
-                            </p>
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">User Journey: Searching for nearest, available bike</h3>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding">
+                            <ul>
+                                <li>arrive on website, select ‘Standorte', enter Post Code - feature not available</li>
+                                <li>search by city name ‘Bonn’ - shown a map of city with location of bikes</li>
+                                <li>Tooltips inform user of single bike number, or stations with at least 4 bikes available</li>
+                                <li>User has to manually zoom out of map, navigate to their area and zoom back into view more details about bikes available
+                                <li>Bike cannot be directly selected for reservation; user must register as 1st step
+                                <li>First Page of Registration relatively comfortable - only 3 pieces of information
+                                <li>Second page not exactly clear where the Pin has been sen to - after 3 Minutes wait, neither E-Mail or Text received
+                                <li>After retrying to send pin, page timed out, sent back to start, couldn’t re-register as Phone Number was already ‘registered'
+                            </ul>
                         </div>
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">User Experience Summary</h3>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text">
+                                <strong>Does the site or application give the user value?</strong><br>
+                                The idea of bike rentals is nothing new to me, having made use of similar services in Belfast and Dublin. However this is the first time such a service has been provided to the people in Bonn.
+                                The site looks relatively modern, there is however a questionable amount of information on the landing page - a user can not directly begin his or her search for a nearby bike, but instead is provided with a lot of information regarding registering and about the service itself. for someone who is already familiar with the practice of renting a bike, this information was unnecessary and held me back from the task I wished to carry out. However I can imagine for new users it provides a channel of assurance for something new.
+                                The site has all the necessary features required for providing such a service, and has a relatively neat Information Architecture
+                                <br><br>
+                                <strong>Does the user find the site or application simple to navigate?</strong><br>
+                                The site follows a typical web standard for a top navigation - logo and home button on left hand side of screen, 1st level navigation on the right. Language options clutter the header a little bit, I would prefer this option to be automatically set from my browser settings with a secondary option in the footer as back up. Call to Action Button in header is for registration - questionable if this is needed in top navigation as several other buttons available on start page or other under pages in journey. Footer a little overloaded with logos of partners, but overall a well presented area to finish off the page.
+                                <br><br>
+                                <strong>Does the user actually enjoy using the site or application?</strong><br>
+                                As my attempt to register seemed to have failed, I was relatively disappointed with the site. I also see no option to resend a pin myself, and have to contact support for further help. The ‘How To’ section of the site seems to outline a streamlined process, from registering to downloading the app, to finding and renting the first bike. Once I hear back from support I will be sure to try the full experience!
+                                I was a little disappointed at the search function - I see this as the main functionality of the service, and its hidden in the menu instead of appearing on the first page. There is also no way to search with a post code - the most convenient method of locating an address. Instead, the user has to manually enter the city, scroll to the location they want to search and then look for bikes.
+                        </div>
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Wireframing</h3>
                         <div class="mdl-cell mdl-cell--6-col">
-                            <img class="article-image" src=" images/portfolio-example-02.jpg" border="0" alt="">
-                        </div>
-                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Initial Ideas</h3>
-                        <div class="mdl-cell mdl-cell--6-col">
-                            <img class="article-image" src=" images/portfolio-example-03.jpg" border="0" alt="">
-                        </div>
-                        <div class="mdl-cell mdl-cell--6-col mdl-card__supporting-text no-padding ">
-                            <p>
-                                Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet. Voluptate voluptate irure occaecat deserunt incididunt esse in. Sunt velit aliquip sunt elit ex nulla reprehenderit qui ut eiusmod ipsum do. Duis veniam reprehenderit laborum occaecat id proident nulla veniam. Duis enim deserunt voluptate aute veniam sint pariatur exercitation. Irure mollit est sit labore est deserunt pariatur duis aute laboris cupidatat. Consectetur consequat esse est sit veniam adipisicing ipsum enim irure.
-                            </p>
-                        </div>
-                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Final Concept</h3>
-                        <div class="mdl-cell mdl-cell--6-col">
-                            <img class="article-image" src=" images/portfolio-example-05.jpg" border="0" alt="">
-                        </div>
-                        <div class="mdl-cell mdl-cell--6-col">
-                            <img class="article-image" src=" images/portfolio-example-06.jpg" border="0" alt="">
-                        </div>
-                        <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
-                            <p>
-                                Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet. Voluptate voluptate irure occaecat deserunt incididunt esse in. Sunt velit aliquip sunt elit ex nulla reprehenderit qui ut eiusmod ipsum do. Duis veniam reprehenderit laborum occaecat id proident nulla veniam. Duis enim deserunt voluptate aute veniam sint pariatur exercitation. Irure mollit est sit labore est deserunt pariatur duis aute laboris cupidatat. Consectetur consequat esse est sit veniam adipisicing ipsum enim irure.
-                            </p>
+                            
                         </div>
                     </div>
                 </div>
