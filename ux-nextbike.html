@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>UX Analysis nextbike</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-indigo.min.css" />
     <link rel="stylesheet" href="./css/coderwurst.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -54,40 +54,72 @@
                     <div class="mdl-card__media">
                         <img class="article-image" src=" images/nextbike-start.png" border="0" alt="nextbike home page">
                     </div>
-                    
-                    
+                    <br><br><br>
                     <div class="mdl-grid portfolio-copy">
                         <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">User Journey: Searching for nearest, available bike</h3>
                         <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding">
                             <ul>
-                                <li>arrive on website, select ‘Standorte', enter Post Code - feature not available</li>
-                                <li>search by city name ‘Bonn’ - shown a map of city with location of bikes</li>
+                                <li>User enters "Next Bike Bonn" in Gogle Search</li>
+                                <li>User arrives on website after selecting top hit, select ‘Standorte'</li>
+                                <li>Search by city name ‘Bonn’ - shown a map of city with location of bikes</li>
                                 <li>Tooltips inform user of single bike number, or stations with at least 4 bikes available</li>
-                                <li>User has to manually zoom out of map, navigate to their area and zoom back into view more details about bikes available
+                                <li>User has to manually zoom out of map, navigate to their area and zoom back into view more details about bikes available</li>
                                 <li>Bike cannot be directly selected for reservation; user must register as 1st step
-                                <li>First Page of Registration relatively comfortable - only 3 pieces of information
-                                <li>Second page not exactly clear where the Pin has been sen to - after 3 Minutes wait, neither E-Mail or Text received
-                                <li>After retrying to send pin, page timed out, sent back to start, couldn’t re-register as Phone Number was already ‘registered'
+                                <li>First Page of Registration including only 3 pieces of information (Telephone Number, City, E-Mail Address)
+                                <li>Second page was a stopper for me - not exactly clear where the Pin has been sent to - after 5 Minutes wait, neither E-Mail or Text received
+                                <li>After retrying to send pin, page timed out, sent back to start, couldn’t re-register as contact phone number was already ‘registered'</li>
                             </ul>
                         </div>
-                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">User Experience Summary</h3>
+                        <div class="mdl-card__media">
+                            <img class="article-image" src=" images/nextbike-reg success.png" border="0" alt="nextbike successful register">
+                        </div>
+                        
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline"><br>User Experience Summary</h3>
                         <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text">
                             <strong>Does the site or application give the user value?</strong><br>
-                            The idea of bike rentals is nothing new to me, having made use of similar services in Belfast and Dublin. However this is the first time such a service has been provided to the people in Bonn.
-                            The site looks relatively modern, there is however a questionable amount of information on the landing page - a user can not directly begin his or her search for a nearby bike, but instead is provided with a lot of information regarding registering and about the service itself. for someone who is already familiar with the practice of renting a bike, this information was unnecessary and held me back from the task I wished to carry out. However I can imagine for new users it provides a channel of assurance for something new.
-                            The site has all the necessary features required for providing such a service, and has a relatively neat Information Architecture
+                            The idea of bike rentals is nothing new to me, having made use of similar services in Belfast and Dublin. However this is the first time such a service 
+                            has been provided in my current location, Bonn. The site looks relatively modern, there is however a questionable amount of information on the landing page - 
+                            a user can not directly begin his or her search for a nearby bike, but instead is provided with a lot of information regarding registering and about 
+                            the service itself. for someone who is already familiar with the practice of renting a bike, this information was unnecessary and held me back from the 
+                            task I wished to carry out. However I can imagine for new users it provides a channel of assurance for something new. The site has all the necessary 
+                            features required for providing such a service, and has a relatively neat Information Architecture.
                             <br><br>
                             <strong>Does the user find the site or application simple to navigate?</strong><br>
-                            The site follows a typical web standard for a top navigation - logo and home button on left hand side of screen, 1st level navigation on the right. Language options clutter the header a little bit, I would prefer this option to be automatically set from my browser settings with a secondary option in the footer as back up. Call to Action Button in header is for registration - questionable if this is needed in top navigation as several other buttons available on start page or other under pages in journey. Footer a little overloaded with logos of partners, but overall a well presented area to finish off the page.
+                            The site follows a typical web standard for a top navigation - logo and home button on left hand side of screen, 1st level navigation on the right. Language 
+                            options clutter the header a little bit, I would prefer this option to be automatically set from my browser settings with a secondary option in the footer as 
+                            back up. Call to Action Button in header is for registration - questionable if this is needed in top navigation as several other buttons available on start page 
+                            or other under pages in journey. Footer a little overloaded with logos of partners, but overall a well presented area to finish off the page.
                             <br><br>
                             <strong>Does the user actually enjoy using the site or application?</strong><br>
-                            As my attempt to register seemed to have failed, I was relatively disappointed with the site. I also see no option to resend a pin myself, and have to contact support for further help. The ‘How To’ section of the site seems to outline a streamlined process, from registering to downloading the app, to finding and renting the first bike. Once I hear back from support I will be sure to try the full experience!
-                            I was a little disappointed at the search function - I see this as the main functionality of the service, and its hidden in the menu instead of appearing on the first page. There is also no way to search with a post code - the most convenient method of locating an address. Instead, the user has to manually enter the city, scroll to the location they want to search and then look for bikes.
+                            As my attempt to register seemed to have failed, I was relatively disappointed with the site. I also see no option to resend a pin myself, and have to contact
+                            support for further help. The ‘How To’ section of the site seems to outline a streamlined process, from registering to downloading the app, to finding and 
+                            renting the first bike. Once I hear back from support I will be sure to try the full experience!\<br>
+                            I was a little disappointed at the search function - I view this as the main functionality of the service, and its hidden in the menu instead of appearing on 
+                            the first page. There is also no way to search with a postcode - the most convenient method of locating an address. Instead, the user has to manually enter 
+                            the city, scroll to the location they want to search and then look for bikes.
+                            <br><br>
+                            <div class="mdl-card__media">
+                                <img class="article-image" src=" images/nextbike-search.png" border="0" alt="nextbike search">
+                            </div>
                         </div>
                         <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Wireframing</h3>
                         <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text">
-                                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus neque diam, malesuada ac sapien ut, mattis scelerisque nunc. Praesent non mi convallis, lobortis dolor quis, tempor odio. Nulla iaculis lacus in massa lobortis, sit amet iaculis tellus congue. Vestibulum porta nisl magna, in pulvinar tortor dignissim a. In ut ex vitae quam pulvinar viverra. Proin rutrum ac libero id posuere. Pellentesque consectetur mollis urna nec lacinia. Nulla ultrices justo in tincidunt condimentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            Lets take a look at an unsolicited redesign of the home page, with the aim of making it simpler for new users to "get on their bike"...
                         </div>
+                        <div class="mdl-card__media">
+                            <img class="article-image" src=" images/nextbike-wireframe.jpg" border="0" alt="nextbike wireframe">
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding">
+                        <br><br>
+                        <strong>Key Notes:</strong>
+                            <ul>
+                            <li>Most important feature at top of page - search for a bike</li>
+                            <li>Existing users can use login icon at top of page - new users will be requested to sign up in 2nd step of search process</li>
+                            <li>The most important pieces of information kept on a single page - accessed via scrolling or header links</li>
+                            <li>New media type - video can show process of actually getting on a next bike</li>
+                            <li>All important information above the fold</li>
+                        </ul>
+                    </div>
                     </div>
                 </div>
             </div>
