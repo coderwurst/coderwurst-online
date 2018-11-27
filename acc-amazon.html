@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A portfolio template that uses Material Design Lite.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Amazon Accessibility Study - coderwurst.com</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-indigo.min.css" />
+    <link rel="stylesheet" href="./css/coderwurst.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="portfolio-logo"></div>
+                    <span class="mdl-layout__title">coderwurst</span>
+                </span>
+            </div>
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link" href="./index.html">home</a>
+                    <a class="mdl-navigation__link" href="./ux-design.html">ux design</a>
+                    <a class="mdl-navigation__link" href="./ui-design.html">ui design</a>
+                    <a class="mdl-navigation__link" href="./about.html">about me</a>
+                </nav>
+            </div>
+            
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                <a class="mdl-navigation__link" href="./index.html">home</a>
+                <a class="mdl-navigation__link" href="./ux-design.html">ux design</a>
+                <a class="mdl-navigation__link" href="./ui-design.html">ui design</a>
+                <a class="mdl-navigation__link" href="./about.html">about me</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Accessibility Study: Amazon Germany</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        5 Minute Read including:
+                        <span><strong>ux, accessibility</strong></span>
+                        <br>27.11.2018
+                    </div>
+                    <div class="mdl-card__media">
+                        <img class="article-image" src=" images/amazon-start.png" border="0" alt="amazon home page">
+                    </div>
+                    <br><br><br>
+                    <div class="mdl-grid portfolio-copy">
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Accessibility; what's done right</h3>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding">
+                            <ul>
+                                <li>Good use of <a href="https://www.w3.org/TR/wai-aria/">ARIA Attributes</a> for UI components that cannot be effectively made accessible using only html, for example, the search bar at the top of the page</li>
+                                <li>Hidden Header element is present, making page headers availble to screen readers to allow for more comfortable navigation</li>
+                                <li>Form label hidden but available for shopping cart to inform users of number of items in cart</li>
+                                <li>With exception of a h1 element, page has a good semantic structure with use of h2, layout tables, lists and frames to appropriately groupd presented information</li>
+                            </ul>
+                        </div>
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Accessibility; potential problems</h3>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding">
+                            <ul>
+                                <li>Missing Alt Text making visual content not available to screen readers</li>
+                                <li>Empty href attributes on image links, hiding the intended function of these elements</li>
+                                <li>"Alt=Alt" Text provides no meaningful information to a screen reader user, and is made more confusing as several of these images are grouped and will therefore be read together</li>
+                                <li>Missing visible first level heading (H1) on home page presents not only problems with the screen reader, but could also harm your sites <a href="https://www.razorsocial.com/h1-tag/">Google Ranking</a></li>
+                                <li>Missing Tab Indexes on fields can make it hard for keyboard only users to sucessfully navigate the site</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">coderwurst</div>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Privacy & Terms</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
+</html>
