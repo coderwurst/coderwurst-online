@@ -1,7 +1,24 @@
 .container {
   display: grid;
   grid-column-gap: 24px;
+  grid-template-rows: 20% auto 30%;
 }
+
+header {
+  grid-row: 1 / 1;
+}
+
+.contents {
+  grid-row: 2 / 2;
+}
+
+footer {
+  grid-row: 3 / 3;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 
 /** MOBILE **/
 @media (max-width: 375px) {
@@ -13,6 +30,7 @@
   .item {
   
   }
+
 }
 
 
