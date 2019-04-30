@@ -13,7 +13,7 @@ header {
 }
 
 nav {
-
+  grid-row: 1 / 1;
 }
 
 nav a {
@@ -32,11 +32,19 @@ footer {
 /** MOBILE **/
 @media (max-width: 375px) {
 
-  .container {
-    grid-template-columns: 70px 70px 70px 70px;
+  header {
+    grid-column: 1 / 2;
   }
 
-  .item {
+  nav-bar {
+    grid-column: 2 / 4;
+  }
+
+  .container {
+    grid-template-columns: repeat(4, 70px);
+  }
+
+  .contents, footer {
     grid-column: 1 / 4;
   }
 }
@@ -45,25 +53,39 @@ footer {
 /** TABLET **/
 @media (min-width: 640px) {
 
-  .container {
-    grid-template-columns: 83px 83px 83px 83px 83px 83px;
+  header {
+    grid-column: 2 / 3;
   }
 
-  .item {
-    grid-column-start: 2;
-    grid-column-end: 5;
+  nav-bar {
+    grid-column: 3 / 6;
+  }
+
+  .container {
+    grid-template-columns: repeat(6, 83px);
+  }
+
+  .contents, footer {
+    grid-column: 2 / 6;
   }
 }
 
 /** DESKTOP **/
 @media (min-width: 1024px) {
 
-  .container {
-    grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+  header {
+    grid-column: 4 / 5;
   }
 
-  .item {
-    grid-column-start: 4;
-    grid-column-end: 10;
+  nav-bar {
+    grid-column: 5 / 9;
+  }
+
+  .container {
+    grid-template-columns: repeat(12, 60px);
+  }
+
+  .contents, footer {
+    grid-column: 4 / 9;
   }
 }
