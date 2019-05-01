@@ -1,3 +1,19 @@
+/** STYLES **/
+:root {
+  --primary-black-color: #000000;
+  --primary-grey-color: #535461;
+  --primary-navy-color: #2F2E41;
+
+  --secondry-white-color: #EEEEEE;
+  --secondry-green-color: #4DB6AC;
+  --secondry-blue-color: #3A3768;
+
+  --text-default-color: #4A4A4A;
+  --text-link-color: #9B9B9B;
+
+}
+
+/** GRID **/
 .container {
   display: grid;
   grid-column-gap: 24px;
@@ -7,6 +23,8 @@
 .item {
   margin-bottom: 60px;
 }
+
+/** HTML ELEMENTS **/
 
 header {
   grid-row: 1 / 1;
