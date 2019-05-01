@@ -10,8 +10,77 @@
 
   --text-default-color: #4A4A4A;
   --text-link-color: #9B9B9B;
-
 }
+
+h1 {
+  font-family: "Roboto";
+  font-size: 30px;
+  font-style: light;
+  font-weight: 400;
+  line-height: 35px;
+  color: var(--text-default-color);
+}
+
+h2 {
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: bold;
+  font-weight: 800;
+  line-height: 27px;
+  color: var(--text-default-color);
+}
+
+h3 {
+  font-family: "Apple Gothic";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: var(--text-default-color);
+}
+
+h4 {
+  font-family: "Apple Gothic";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 1.68px;
+  color: var(--text-default-color);
+}
+
+body {
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--text-default-color);
+}
+
+body em {
+  font-style: italic;
+}
+
+a {
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--text-link-color);
+}
+
+label {
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--text-link-color);
+}
+
 
 /** GRID **/
 .container {
