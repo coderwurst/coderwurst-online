@@ -20,6 +20,10 @@ nav a {
 
 }
 
+img {
+  width: 100%;
+}
+
 .contents {
   grid-row: 2 / 2;
 }
