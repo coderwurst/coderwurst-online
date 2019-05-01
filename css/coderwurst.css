@@ -99,6 +99,7 @@ label {
   display: grid;
   grid-column-gap: 24px;
   grid-template-rows: 56px auto 80px;
+  justify-content: center;
 }
 
 .item {
@@ -134,23 +135,20 @@ footer {
 
 
 /** MOBILE **/
-@media (max-width: 375px) {
+header {
+  grid-row: 1 / 1;
+}
 
-  header {
-    grid-column: 1 / 2;
-  }
+nav {
+  grid-column: 1 / 5;
+}
 
-  nav-bar {
-    grid-column: 2 / 4;
-  }
+.container {
+  grid-template-columns: repeat(4, 70px);
+}
 
-  .container {
-    grid-template-columns: repeat(4, 70px);
-  }
-
-  .contents, footer {
-    grid-column: 1 / 4;
-  }
+.contents, footer {
+  grid-column: 1 / 5;
 }
 
 
