@@ -95,7 +95,7 @@ label {
   justify-content: center;
 }
 
-.item {
+.section {
   margin-bottom: 60px;
 }
 
@@ -152,7 +152,7 @@ header {
   grid-row: 2 / 2;
 }
 
-.project {
+.item {
   margin-bottom: 1.5rem;
 }
 
