@@ -19,54 +19,49 @@
 
 h1 {
   font-family: "Roboto";
-  font-size: 30px;
-  font-style: light;
-  font-weight: 400;
-  line-height: 35px;
+  font-size: 1.875rem;
+  font-weight: 200;
+  line-height: 1.5em;
   color: var(--text-default-color);
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 h2 {
   font-family: "Open Sans";
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: bold;
-  font-weight: 800;
-  line-height: 27px;
+  line-height: 1.5em;
   color: var(--text-default-color);
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-family: "Apple Gothic";
-  font-size: 16px;
+  font-size: 1.15rem;
   font-style: normal;
-  font-weight: 400;
-  line-height: 19px;
+  line-height: 1.5em;
   letter-spacing: 2px;
   color: var(--text-default-color);
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 h4 {
   font-family: "Apple Gothic";
-  font-size: 11px;
+  font-size: 1rem;
   font-style: normal;
-  font-weight: 400;
-  line-height: 17px;
+  line-height: 1.5em;
   letter-spacing: 1.68px;
   color: var(--text-default-color);
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 body {
   font-family: "Open Sans";
-  font-size: 12px;
+  font-size: 1rem;
   font-style: normal;
-  font-weight: 400;
-  line-height: 17px;
+  line-height: 1.5rem;
   color: var(--text-default-color);
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 body em {
@@ -75,22 +70,20 @@ body em {
 
 a {
   font-family: "Open Sans";
-  font-size: 12px;
+  font-size: 1rem;
   font-style: normal;
-  font-weight: 400;
-  line-height: 17px;
+  line-height: 1.5rem;
   color: var(--text-link-color);
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 label {
   font-family: "Open Sans";
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
-  font-weight: 400;
-  line-height: 17px;
+  line-height: 1.125rem;
   color: var(--text-link-color);
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 
@@ -112,19 +105,12 @@ header {
   grid-row: 1 / 1;
   grid-column: 1 / 5;
   margin-bottom: 24px;
-}
-
-h1 {
   text-align: center;
 }
 
-nav {
-  grid-row: 1 / 1;
-}
-
 nav a {
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 img {
@@ -143,12 +129,11 @@ ul {
 footer {
   grid-row: 3 / 3;
   text-align: center;
-  align-self: stretch;
 }
 
 footer a {
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 
@@ -165,6 +150,10 @@ header {
 .contents {
   grid-column: 1 / 5;
   grid-row: 2 / 2;
+}
+
+.project {
+  margin-bottom: 1.5rem;
 }
 
 footer {
