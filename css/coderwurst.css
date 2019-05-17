@@ -126,11 +126,12 @@ a:active {
   color: var(--secondry-green-color);
 }
 
-
+.image-container {
+  display: flex;
+  justify-content: center;
+}
 
 img {
-  width: 100%;
-  height: auto;
   opacity: 0.95;
   transform: scale(0.90);
   transition: transform 0.5s, opacity 0.5s;
@@ -189,7 +190,7 @@ footer {
 @media (min-width: 640px) {
 
   header {
-    grid-column: 2 / 6;
+    grid-column: 1 / 7;
   }
 
   .container {
@@ -197,7 +198,7 @@ footer {
   }
 
   .contents, footer {
-    grid-column: 2 / 6;
+    grid-column: 1 / 7;
   }
 }
 
@@ -205,7 +206,7 @@ footer {
 @media (min-width: 1024px) {
 
   header {
-    grid-column: 4 / 10;
+    grid-column: 3 / 11;
   }
 
   .container {
@@ -213,8 +214,9 @@ footer {
   }
 
   .contents, footer {
-    grid-column: 4 / 10;
+    grid-column: 3 / 11;
   }
+
 }
 
 /** Scroll Effect **/
