@@ -193,7 +193,7 @@ footer {
 @media (min-width: 1024px) {
 
   header {
-    grid-column: 4 / 9;
+    grid-column: 4 / 10;
   }
 
   .container {
@@ -201,7 +201,7 @@ footer {
   }
 
   .contents, footer {
-    grid-column: 4 / 9;
+    grid-column: 4 / 10;
   }
 }
 
