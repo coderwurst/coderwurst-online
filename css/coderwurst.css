@@ -113,7 +113,19 @@ header {
 nav a {
   margin-left: 12px;
   margin-right: 12px;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
 }
+
+a:hover {
+  color: var(--secondry-green-color);
+}
+
+a:active {
+  color: var(--secondry-green-color);
+}
+
+
 
 img {
   width: 100%;
@@ -143,8 +155,7 @@ footer {
 }
 
 footer a {
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-right: 36px;
 }
 
 
@@ -216,4 +227,24 @@ html {
 	}
 }
 
+/** Social Media Icons **/
+.social  {
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
 
+.twitter-icon:hover {
+  color: #55acee;
+}
+
+.github-icon:hover {
+  color: #333333;
+}
+
+.linkedin-icon:hover {
+  color: #0077b5;
+}
+
+.xing-icon:hover {
+  color: #026466;
+}
