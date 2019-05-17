@@ -91,8 +91,9 @@ label {
 /** GRID **/
 .container {
   display: grid;
+  height: 100vh;
   grid-column-gap: 24px;
-  grid-template-rows: auto auto 80px;
+  grid-template-rows: 120px auto 80px;
   justify-content: center;
 }
 
