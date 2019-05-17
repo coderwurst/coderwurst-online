@@ -115,6 +115,15 @@ nav a {
 
 img {
   width: 100%;
+  height: auto;
+  opacity: 0.95;
+  transform: scale(0.90);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+img:hover {
+  opacity: 1;
+  transform: scale(1);
 }
 
 ul {
