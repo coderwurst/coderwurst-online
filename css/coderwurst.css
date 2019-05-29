@@ -5,16 +5,16 @@
 
 /** STYLES **/
 :root {
-  --primary-black-color: #000000;
-  --primary-grey-color: #535461;
-  --primary-navy-color: #2F2E41;
 
   --secondry-white-color: #EEEEEE;
   --secondry-green-color: #4DB6AC;
-  --secondry-blue-color: #3A3768;
+  --secondry-blue-color: #6E7B97;
 
-  --text-default-color: #4A4A4A;
-  --text-link-color: #9B9B9B;
+  --text-default-color: #212121;
+  --text-header-color: #665c84;
+  --text-link-color: #71a0a5;
+  --text-link-hover-color: #fab95b;
+
 }
 
 h1 {
@@ -22,7 +22,7 @@ h1 {
   font-size: 1.875rem;
   font-weight: 200;
   line-height: 1.5em;
-  color: var(--text-default-color);
+  color: var(--text-header-color);
   margin-bottom: 1rem;
 }
 
@@ -31,7 +31,7 @@ h2 {
   font-size: 1.25rem;
   font-style: bold;
   line-height: 1.5em;
-  color: var(--text-default-color);
+  color: var(--text-header-color);
   margin-bottom: 1rem;
   margin-top: 2rem;
 }
@@ -42,7 +42,7 @@ h3 {
   font-style: normal;
   line-height: 1.5em;
   letter-spacing: 2px;
-  color: var(--text-default-color);
+  color: var(--text-header-color);
   margin-bottom: 1rem;
 }
 
@@ -52,7 +52,7 @@ h4 {
   font-style: normal;
   line-height: 1.5em;
   letter-spacing: 1.68px;
-  color: var(--text-default-color);
+  color: var(--text-header-color);
   margin-bottom: 1rem;
 }
 
@@ -64,6 +64,7 @@ body {
   color: var(--text-default-color);
   margin-bottom: 0.5rem;
   min-height: 100%;
+  background-color: var(--secondry-white-color);
 }
 
 body em {
@@ -120,11 +121,11 @@ nav a {
 }
 
 a:hover {
-  color: var(--secondry-green-color);
+  color: var(--text-link-hover-color);
 }
 
 a:active {
-  color: var(--secondry-green-color);
+  color: var(--text-link-hover-color);
 }
 
 .download-link {
@@ -140,7 +141,7 @@ a:active {
 }
 
 .panel {
-  background-color: #EDEDED;
+  border-radius: 4px;
   padding: 24px;
 }
 
