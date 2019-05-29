@@ -37,7 +37,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Apple Gothic";
+  font-family: "Open Sans";
   font-size: 1.15rem;
   font-style: normal;
   line-height: 1.5em;
@@ -47,7 +47,7 @@ h3 {
 }
 
 h4 {
-  font-family: "Apple Gothic";
+  font-family: "Open Sans";
   font-size: 1rem;
   font-style: normal;
   line-height: 1.5em;
@@ -136,6 +136,22 @@ a:active {
 .image-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 24px;
+}
+
+.panel {
+  background-color: #EDEDED;
+  padding: 24px;
+}
+
+.education-year {
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5em;
+  letter-spacing: 1.68px;
+  color: var(--text-default-color);
+  margin-bottom: 1rem;
 }
 
 img {
@@ -187,6 +203,10 @@ header {
   margin-bottom: 80px;
 }
 
+p {
+  margin-bottom: 24px;
+}
+
 footer {
   grid-column: 1 / 5;
   grid-row: 3 / 3;
@@ -213,7 +233,7 @@ footer {
 @media (min-width: 1024px) {
 
   header {
-    grid-column: 3 / 11;
+    grid-column: 4 / 10;
   }
 
   .container {
@@ -221,7 +241,7 @@ footer {
   }
 
   .contents, footer {
-    grid-column: 3 / 11;
+    grid-column: 4 / 10;
   }
 
 }
