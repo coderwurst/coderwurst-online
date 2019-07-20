@@ -134,6 +134,10 @@ a:active {
   justify-content: center;
 }
 
+.download-link  a{
+  margin-right: 24px;
+}
+
 .image-container {
   display: flex;
   justify-content: center;
