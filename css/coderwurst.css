@@ -6,14 +6,12 @@
 /** STYLES **/
 :root {
 
-  --secondry-white-color: #EEEEEE;
-  --secondry-green-color: #4DB6AC;
-  --secondry-blue-color: #6E7B97;
+  --secondry-white-color: #FFFFFF;
 
   --text-default-color: #212121;
-  --text-header-color: #665c84;
-  --text-link-color: #71a0a5;
-  --text-link-hover-color: #fab95b;
+  --text-header-color: #0B162A;
+  --text-link-color: #0B162A;
+  --text-link-hover-color: #C83803;
 
 }
 
